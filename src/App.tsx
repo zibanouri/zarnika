@@ -1,10 +1,13 @@
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
 
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <BrowserRouter basename="/zarnika">
+      <Routes>
+        <Route path="*" element={<Index />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
