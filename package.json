@@ -8,7 +8,10 @@
     "react",
     "vite",
     "typescript",
-    "portfolio"
+    "portfolio",
+    "admin",
+    "admin-panel",
+    "responsive"
   ],
   "author": {
     "name": "Ziba Nouri",
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@tailwindcss/vite": "^4.1.12",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
@@ -49,6 +53,7 @@
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
     "react-router-dom": "^7.8.2",
+    "tailwindcss": "^4.1.12",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2"
