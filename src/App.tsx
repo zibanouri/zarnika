@@ -3,7 +3,7 @@ import Index from "./pages/Index";
 
 function App() {
   return (
-    <BrowserRouter basename="/zarnika">
+    <BrowserRouter basename="/project-name">
       <Routes>
         <Route path="*" element={<Index />} />
       </Routes>
