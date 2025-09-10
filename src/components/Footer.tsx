@@ -5,9 +5,9 @@ const Footer = () => {
                 Zarnika© 2025 Ziba Nouri. All Rights Reserved. Made with love
                 by ✨
                 <a
-                    className="pl-1 text-blue-950 hover:text-blue-700 duration-300"
-                    target="blan"
-                    href="register"
+                    className="pl-1 text-pink-950 hover:text-pink-700 duration-300"
+                    target="blank"
+                    href="https://github.com/zibanouri"
                 >
                     Ziba
                 </a>
