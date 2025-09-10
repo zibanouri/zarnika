@@ -6,7 +6,7 @@ import NotFound from './pages/NotFound';
 
 function App() {
     return (
-        <BrowserRouter basename="/project-name">
+        <BrowserRouter basename="/zarnika">
             <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/login" element={<Login />} />

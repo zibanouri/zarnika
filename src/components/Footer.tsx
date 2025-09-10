@@ -7,7 +7,7 @@ const Footer = () => {
                 <a
                     className="pl-1 text-blue-950 hover:text-blue-700 duration-300"
                     target="blan"
-                    href="https://github.com/zibanouri"
+                    href="register"
                 >
                     Ziba
                 </a>
