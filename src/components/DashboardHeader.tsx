@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
-import {Menu} from "lucide-react"
+import {  Menu, Moon,  } from "lucide-react"
+
 const DashboardHeader = () =>{
     return(
        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-pink-100 border-b border-pink-600 hover:border-pink-400 duration-300">
@@ -10,7 +11,16 @@ const DashboardHeader = () =>{
                     <Menu className="h-5 w-5"/>
                     </Button>
                 </div>
-                </div>
+                {/* Right Section */}
+                <div className="flex items-center gap-2">
+                    <Button variant="ghost" size="sm">
+                        <Moon className="h-5 w-5" />
+                    </Button>
+                    {/* <Button variant="ghost" size="sm">
+                        <Bell className="h-5 w-5" />
+                    </Button> */}
+                    </div>
+            </div>
         </header>
     )
 }
