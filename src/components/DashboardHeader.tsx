@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import {  Menu, Moon, Bell } from "lucide-react"
+import {  Menu, Moon, Bell, Settings } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 const DashboardHeader = () =>{
@@ -22,6 +22,9 @@ const DashboardHeader = () =>{
                          <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 bg-red-400 flex items-center justify-center">
                             28
                         </Badge>
+                    </Button>
+                    <Button variant="ghost" size="sm">
+                        <Settings className="h-5 w-5" />
                     </Button>
                     </div>
             </div>
