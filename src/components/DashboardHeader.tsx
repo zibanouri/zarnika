@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import {  Menu, Moon, Bell, Settings } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const DashboardHeader = () =>{
     return(
