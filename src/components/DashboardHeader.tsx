@@ -27,6 +27,16 @@ const DashboardHeader = () =>{
                     <Button variant="ghost" size="sm">
                         <Settings className="h-5 w-5" />
                     </Button>
+                     <Button
+                                variant="ghost"
+                                size="sm"
+                                className="relative"
+                            >
+                                <Avatar className="h-8 w-8">
+                                    <AvatarImage src="public/avatar/profile.webp" alt="profile"/>
+                                    <AvatarFallback>zn</AvatarFallback>
+                                </Avatar>
+                            </Button>
                     </div>
             </div>
         </header>
