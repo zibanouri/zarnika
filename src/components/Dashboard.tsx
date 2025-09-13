@@ -3,7 +3,7 @@ import DashboardHeader from './DashboardHeader';
 const Dashboard = () => {
     return (
         <div className="min-h-screen">
-           <DashboardHeader />
+            <DashboardHeader />
 
             <div className="flex">
                 <div id="DashboardSidebar"></div>
