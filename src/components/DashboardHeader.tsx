@@ -1,5 +1,7 @@
 import { Button } from './ui/button';
-import { Menu, Moon, Bell, Settings, User, LogOut  } from 'lucide-react';
+import { Menu, Moon, Bell, Settings, User, LogOut } from 'lucide-react';
+
+
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -10,11 +12,26 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
 } from "@/components/ui/popover";
 
+    const mockNotifications = [
+        {
+            id: 1,
+            title: 'New User Registered',
+            time: '2 min ago',
+            unread: true,
+        },
+        { id: 2, title: 'Payment Received', time: '10 min ago', unread: true },
+        {
+            id: 3,
+            title: 'Server Maintenance Scheduled',
+            time: '1 hour ago',
+            unread: false,
+        },
+    ];
 
 const DashboardHeader = () => {
     return (
@@ -31,22 +48,53 @@ const DashboardHeader = () => {
                     <Button variant="ghost" size="sm" className="rounded-full">
                         <Moon className="h-5 w-5" />
                     </Button>
-                   
-                   <Popover>
+
+                    <Popover>
                         <PopoverTrigger asChild>
-                    <Button variant="ghost" size="sm" className="relative rounded-full">
-                        <Bell className="h-5 w-5" />
-                        <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 bg-red-400 flex items-center justify-center">
-                            3
-                        </Badge>
-                    </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-80 p-0">
+                            <Button variant="ghost" size="sm" className="relative rounded-full">
+                                <Bell className="h-5 w-5" />
+                                <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 bg-red-400 flex items-center justify-center">
+                                    3
+                                </Badge>
+                            </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-80 p-0">
                             <div className="p-4 border-b">
                                 <h3 className="font-semibold">Notifications</h3>
                             </div>
+                            <div className="max-h-64 overflow-y-auto">
+                                {mockNotifications.map((notification) => (
+                                    <div
+                                        key={notification.id}
+                                        className="p-3 border-b hover:bg-muted/50"
+                                    >
+                                        <div className="flex items-start gap-3">
+                                            <div
+                                                className={`w-2 h-2 rounded-full mt-2 ${notification.unread ? 'bg-green-500' : 'bg-slate-300'}`}
+                                            />
+                                            <div className="flex-1">
+                                                <p className="text-sm font-medium">
+                                                    {notification.title}
+                                                </p>
+                                                <p className="text-xs font-medium text-muted-foreground">
+                                                    {notification.time}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="p-3 border-t">
+                                <Button
+                                    variant="ghost"
+                                    size="sm"
+                                    className="w-full"
+                                >
+                                    View All Notifications
+                                </Button>
+                            </div>
                         </PopoverContent>
-                          </Popover>
+                    </Popover>
                     <Button variant="ghost" size="sm" className="rounded-full">
                         <Settings className="h-5 w-5" />
                     </Button>
