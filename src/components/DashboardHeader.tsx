@@ -1,7 +1,6 @@
 import { Button } from './ui/button';
 import { Menu, Moon, Bell, Settings, User, LogOut } from 'lucide-react';
 
-
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -15,23 +14,23 @@ import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/components/ui/popover";
+} from '@/components/ui/popover';
 
-    const mockNotifications = [
-        {
-            id: 1,
-            title: 'New User Registered',
-            time: '2 min ago',
-            unread: true,
-        },
-        { id: 2, title: 'Payment Received', time: '10 min ago', unread: true },
-        {
-            id: 3,
-            title: 'Server Maintenance Scheduled',
-            time: '1 hour ago',
-            unread: false,
-        },
-    ];
+const mockNotifications = [
+    {
+        id: 1,
+        title: 'New User Registered',
+        time: '2 min ago',
+        unread: true,
+    },
+    { id: 2, title: 'Payment Received', time: '10 min ago', unread: true },
+    {
+        id: 3,
+        title: 'Server Maintenance Scheduled',
+        time: '1 hour ago',
+        unread: false,
+    },
+];
 
 const DashboardHeader = () => {
     return (
@@ -39,7 +38,11 @@ const DashboardHeader = () => {
             <div className="flex items-center justify-between h-full px-4">
                 {/* Left Section */}
                 <div className="flex items-center gap-4">
-                    <Button variant="ghost" size="sm" className="md:hidden rounded-full">
+                    <Button
+                        variant="ghost"
+                        size="sm"
+                        className="md:hidden rounded-full"
+                    >
                         <Menu className="h-5 w-5" />
                     </Button>
                 </div>
@@ -51,7 +54,11 @@ const DashboardHeader = () => {
 
                     <Popover>
                         <PopoverTrigger asChild>
-                            <Button variant="ghost" size="sm" className="relative rounded-full">
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                className="relative rounded-full"
+                            >
                                 <Bell className="h-5 w-5" />
                                 <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 bg-red-400 flex items-center justify-center">
                                     3
