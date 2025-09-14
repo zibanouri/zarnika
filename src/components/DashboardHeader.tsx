@@ -1,5 +1,5 @@
 import { Button } from './ui/button';
-import { Menu, Moon, Bell, Settings, User, LogOut } from 'lucide-react';
+import { Menu, Moon, Bell, Settings, User, LogOut  } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -9,6 +9,12 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
 
 const DashboardHeader = () => {
     return (
@@ -25,12 +31,22 @@ const DashboardHeader = () => {
                     <Button variant="ghost" size="sm" className="rounded-full">
                         <Moon className="h-5 w-5" />
                     </Button>
+                   
+                   <Popover>
+                        <PopoverTrigger asChild>
                     <Button variant="ghost" size="sm" className="relative rounded-full">
                         <Bell className="h-5 w-5" />
                         <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 bg-red-400 flex items-center justify-center">
                             3
                         </Badge>
                     </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-80 p-0">
+                            <div className="p-4 border-b">
+                                <h3 className="font-semibold">Notifications</h3>
+                            </div>
+                        </PopoverContent>
+                          </Popover>
                     <Button variant="ghost" size="sm" className="rounded-full">
                         <Settings className="h-5 w-5" />
                     </Button>
