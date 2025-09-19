@@ -57,6 +57,10 @@ const DashboardSidebar = () => {
                     <span className="truncate">{item.label}</span>
                 </Button>
                 ))}
+                {/* Analitix */}
+                <div className="relative">
+
+                </div>
             </nav>
         </aside>
     );
