@@ -34,7 +34,7 @@ const mockNotifications = [
 
 const DashboardHeader = () => {
     return (
-        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-pink-100 border-b border-slate-600 hover:border-slate-400 duration-300">
+        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-pink-50 border-b border-pink-100 hover:border-pink-200 duration-300">
             <div className="flex items-center justify-between h-full px-4">
                 {/* Left Section */}
                 <div className="flex items-center gap-4">
