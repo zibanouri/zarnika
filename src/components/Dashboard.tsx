@@ -1,12 +1,12 @@
 import Footer from './Footer';
 import DashboardHeader from './DashboardHeader';
-import DashboardSidebar from './DashboardSidebar'; 
+import DashboardSidebar from './DashboardSidebar';
 
 const Dashboard = () => {
     return (
         <div className="min-h-screen">
             <DashboardHeader />
-            
+
             <div className="flex">
                 <DashboardSidebar />
 
