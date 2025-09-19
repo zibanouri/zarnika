@@ -139,7 +139,7 @@ const DashboardSidebar = () => {
                             className="w-full justify-start gap-3 h-9"
                         >
                             <MessagesSquare className="h-4 w-4 flex-shrink-0" />
-                            <span className="text-sm">Suport</span>
+                            <span className="text-sm">Supp ort</span>
                         </Button>
                     </div>
                 </div>
