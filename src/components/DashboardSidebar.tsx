@@ -27,7 +27,7 @@ const DashboardSidebar = () => {
     const menuItem = [
         {
             id: 'dashboard',
-            label: 'dashboard',
+            label: 'Dashboard',
             icon: LayoutDashboard,
             href: '/',
         },
