@@ -114,7 +114,7 @@ const DashboardHeader = () => {
                             >
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage
-                                        src="zarnika/avatar/profile.webp"
+                                        src="public/avatar/profile.webp"
                                         alt="profile"
                                     />
                                     <AvatarFallback>ZN</AvatarFallback>
