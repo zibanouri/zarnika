@@ -114,7 +114,7 @@ const DashboardHeader = () => {
                             >
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage
-                                        src="public/avatar/profile.webp"
+                                        src="public/avatar/profile3.png"
                                         alt="profile"
                                     />
                                     <AvatarFallback>ZN</AvatarFallback>
