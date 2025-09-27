@@ -27,8 +27,7 @@
   },
   "profiles": {
     "gitHub": "https://github.com/zibanouri",
-    "linkedin": "https://www.linkedin.com/in/zibanouri",
-    "researchgate": "https://www.researchgate.net/profile/ziba-nouri"
+    "linkedin": "https://www.linkedin.com/in/zibanouri"
   },
   "scripts": {
     "dev": "vite",
