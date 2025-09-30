@@ -53,8 +53,8 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 ## Contact
 
 For any inquiries, please contact:
-- std_ziba.nouri@khu.ac.ir
-- khuzibanouri@gmail.com
+- https://github.com/zibanouri
+- zn.zibanouri@gmail.com
 
 ---
 
@@ -81,14 +81,6 @@ If you find this template useful, please consider supporting development:
 - Bitcoin: `bc1qxd8um2jre6xz4je64uhar9eh9uzu9yrvzh08sm`
 - Ethereum: `0xCc8693060409263F68e37f75f76d519c19B2bAdE`
 - USDT (TRC20): `TLL9ou7PahrNob2GEppV3o4e5B9vYqgsJN`
-
-**🌐 Donate via CoinDrop**
-
-<p align="center">
-  <a href="https://coindrop.to/zibanouri" target="_blank">
-    <img src="https://coindrop.to/embed-button.png" style="border-radius: 10px; height: 57px !important;width: 229px !important;" alt="Coindrop.to me">
-  </a>
-</p>
 
 ---
 
