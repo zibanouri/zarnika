@@ -1,5 +1,15 @@
 import { Button } from './ui/button';
-import { Menu, Moon, Bell, Settings, User, LogOut } from 'lucide-react';
+import {
+    Menu,
+    Moon,
+    Bell,
+    Settings,
+    User,
+    LogOut,
+    LogIn,
+    UserPlus,
+    Github,
+} from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
