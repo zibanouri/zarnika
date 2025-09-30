@@ -120,17 +120,18 @@ const DashboardHeader = () => {
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                className="relative rounded-full"
+                                className="relative"
                             >
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage
-                                        src="/zarnika/avatar/profile3.png"
+                                        src="/cores/dashboard/avatar.webp"
                                         alt="profile"
                                     />
-                                    <AvatarFallback>ZN</AvatarFallback>
+                                    <AvatarFallback>FA</AvatarFallback>
                                 </Avatar>
                             </Button>
                         </DropdownMenuTrigger>
+
                         <DropdownMenuContent className="w-56" align="end">
                             <DropdownMenuItem>
                                 <User className="h-4 w-4 mr-2" />
@@ -140,10 +141,36 @@ const DashboardHeader = () => {
                                 <Settings className="h-4 w-4 mr-2" />
                                 Settings
                             </DropdownMenuItem>
+
                             <DropdownMenuSeparator />
+
+                            <DropdownMenuItem asChild>
+                                <a href="/cores/register">
+                                    <UserPlus className="h-4 w-4 mr-2" />
+                                    Register
+                                </a>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem asChild>
+                                <a href="/cores/login">
+                                    <LogIn className="h-4 w-4 mr-2" />
+                                    Login
+                                </a>
+                            </DropdownMenuItem>
                             <DropdownMenuItem>
                                 <LogOut className="h-4 w-4 mr-2" />
                                 Logout
+                            </DropdownMenuItem>
+
+                            <DropdownMenuSeparator />
+
+                            <DropdownMenuItem asChild>
+                                <a
+                                    href="https://github.com/farzadasgari/cores"
+                                    target="_blank"
+                                >
+                                    <Github className="h-4 w-4 mr-2" />
+                                    Repository
+                                </a>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
