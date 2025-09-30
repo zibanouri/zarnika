@@ -124,10 +124,10 @@ const DashboardHeader = () => {
                             >
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage
-                                        src="/cores/dashboard/avatar.webp"
+                                        src="/avatar/profile3.png"
                                         alt="profile"
                                     />
-                                    <AvatarFallback>FA</AvatarFallback>
+                                    <AvatarFallback>ZN</AvatarFallback>
                                 </Avatar>
                             </Button>
                         </DropdownMenuTrigger>
@@ -165,7 +165,7 @@ const DashboardHeader = () => {
 
                             <DropdownMenuItem asChild>
                                 <a
-                                    href="https://github.com/farzadasgari/cores"
+                                    href="https://github.com/zibanouri"
                                     target="_blank"
                                 >
                                     <Github className="h-4 w-4 mr-2" />
