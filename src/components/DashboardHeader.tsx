@@ -124,7 +124,7 @@ const DashboardHeader = () => {
                             >
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage
-                                        src="/avatar/profile3.png"
+                                     src="/zarnika/avatar/profile3.png"
                                         alt="profile"
                                     />
                                     <AvatarFallback>ZN</AvatarFallback>
@@ -145,13 +145,13 @@ const DashboardHeader = () => {
                             <DropdownMenuSeparator />
 
                             <DropdownMenuItem asChild>
-                                <a href="/cores/register">
+                                <a href="/zarnika/register">
                                     <UserPlus className="h-4 w-4 mr-2" />
                                     Register
                                 </a>
                             </DropdownMenuItem>
                             <DropdownMenuItem asChild>
-                                <a href="/cores/login">
+                                <a href="/zarnika/login">
                                     <LogIn className="h-4 w-4 mr-2" />
                                     Login
                                 </a>
