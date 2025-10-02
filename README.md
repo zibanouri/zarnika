@@ -59,8 +59,6 @@ For any inquiries, please contact:
 ---
 ## Links
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://zibanouri.ir/)
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ziba-nouri/)
 ---
 ## Support & Donations
