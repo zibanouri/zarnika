@@ -19,7 +19,7 @@ A modern, responsive admin panel template built with **React**, **TypeScript**, 
 ## Live Demo
 
 See the template in action:  
-🚀 **[View Live Demo](https://zibanouri.github.io/zarnika)**
+ **[View Live Demo](https://zibanouri.github.io/zarnika)**
 
 ---
 
@@ -57,30 +57,15 @@ For any inquiries, please contact:
 - zn.zibanouri@gmail.com
 
 ---
-
-
 ## Links
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://zibanouri.ir/)
 
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=fff)](https://scholar.google.com/citations?user=Rhue_kkAAAAJ&hl=en)
-
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-0CB?style=for-the-badge&logo=researchgate&logoColor=fff)](https://www.researchgate.net/profile/Ziba-Nouri)
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ziba-nouri/)
-
-[![X](https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/ziba_nouri)
-
 ---
-
 ## Support & Donations
 
 If you find this template useful, please consider supporting development:
-
-**💸 Crypto Donations**
-- Bitcoin: `bc1qxd8um2jre6xz4je64uhar9eh9uzu9yrvzh08sm`
-- Ethereum: `0xCc8693060409263F68e37f75f76d519c19B2bAdE`
-- USDT (TRC20): `TLL9ou7PahrNob2GEppV3o4e5B9vYqgsJN`
 
 ---
 
