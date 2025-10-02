@@ -61,12 +61,6 @@ For any inquiries, please contact:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ziba-nouri/)
 ---
-## Support & Donations
-
-If you find this template useful, please consider supporting development:
-
----
-
 <div align="center">
   <sub>Made with ❤️ by <a href="https://github.com/zibanouri">ziba</a></sub>
 </div>
