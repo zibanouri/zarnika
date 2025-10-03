@@ -19,7 +19,9 @@ const LoginPage = () => {
         <div className="min-h-screen bg-gradient-to-br from-background to-slate-200 flex items-center justify-center p-4">
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-slate-800">zarnika</h1>
+                    <h1 className="text-3xl font-bold text-slate-800">
+                        zarnika
+                    </h1>
                     <p className="mt-2 text-slate-700">
                         Welcome back to your dashboard
                     </p>
@@ -27,7 +29,9 @@ const LoginPage = () => {
 
                 <Card className="shadow-xl border-0 bg-card/95 backdrop-blur">
                     <CardHeader className="space-y-1">
-                        <CardTitle className="text-2xl font-semibold text-center">Login</CardTitle>
+                        <CardTitle className="text-2xl font-semibold text-center">
+                            Login
+                        </CardTitle>
                         <CardDescription className="text-center">
                             Enter your email and password to access your account
                         </CardDescription>
@@ -48,7 +52,7 @@ const LoginPage = () => {
                                     />
                                 </div>
                             </div>
-                           <div className="space-y-2">
+                            <div className="space-y-2">
                                 <Label htmlFor="password">Password</Label>
                                 <div className="relative">
                                     <Lock className="absolute left-3 top-[10px] h-4 w-4 text-slate-800" />
@@ -68,7 +72,9 @@ const LoginPage = () => {
                                     >
                                         <EyeClosed className="h-4 w-4 text-slate-800" />
                                     </Button>
-                                     <div className="flex items-center justify-between">
+                                </div>
+                            </div>
+                            <div className="flex items-center justify-between">
                                 <div className="flex items-center space-x-2">
                                     <Checkbox id="remember" name="remember" />
                                     <Label
@@ -86,8 +92,9 @@ const LoginPage = () => {
                                     Forgot Password?
                                 </Button>
                             </div>
-                                </div>
-                            </div>  
+                            <Button type="submit" className="w-full">
+                                Sign In
+                            </Button>
                         </form>
                     </CardContent>
                 </Card>
