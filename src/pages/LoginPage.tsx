@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
 
-import { Mail, Lock, EyeClosed } from 'lucide-react';
+import { Mail, Lock, EyeClosed, Github, Facebook, Chrome } from 'lucide-react';
 
 // import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
@@ -105,6 +105,20 @@ const LoginPage = () => {
                                     Or continue with
                                 </span>
                             </div>
+                        </div>
+                        <div className="grid grid-cols-3 gap-2">
+                            <Button variant="outline" className="w-full">
+                                <Chrome className="h-4 w-4 mr-2" />
+                                Google
+                            </Button>
+                            <Button variant="outline" className="w-full">
+                                <Github className="h-4 w-4 mr-2" />
+                                Github
+                            </Button>
+                            <Button variant="outline" className="w-full">
+                                <Facebook className="h-4 w-4 mr-2" />
+                                Facebook
+                            </Button>
                         </div>
                     </CardContent>
                 </Card>
