@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
     Card,
     CardContent,
@@ -11,11 +12,20 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
 
-import { Mail, Lock, EyeClosed, Github, Facebook, Chrome } from 'lucide-react';
+import {
+    Mail,
+    Lock,
+    EyeClosed,
+    Github,
+    Facebook,
+    Chrome,
+    Eye,
+} from 'lucide-react';
 
 import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
     const navigate = useNavigate();
+    const [showPassword, setshowPassword] = useState(true);
     return (
         <div className="min-h-screen bg-gradient-to-br from-background to-slate-200 flex items-center justify-center p-4">
             <div className="w-full max-w-md">
@@ -60,7 +70,9 @@ const LoginPage = () => {
                                     <Input
                                         id="password"
                                         name="password"
-                                        type="password"
+                                        type={
+                                            showPassword ? 'text' : 'password'
+                                        }
                                         placeholder="Enter your password"
                                         className="pl-10"
                                         required
@@ -70,8 +82,15 @@ const LoginPage = () => {
                                         variant="ghost"
                                         size="sm"
                                         className="absolute right-0 top-0 h-full px-3 hover:bg-transparent"
+                                        onClick={() =>
+                                            setshowPassword(!showPassword)
+                                        }
                                     >
-                                        <EyeClosed className="h-4 w-4 text-slate-800" />
+                                        {showPassword ? (
+                                            <EyeClosed className="h-4 w-4 text-slate-800" />
+                                        ) : (
+                                            <Eye className="h-4 w-4 text-slate-800" />
+                                        )}
                                     </Button>
                                 </div>
                             </div>
@@ -135,17 +154,17 @@ const LoginPage = () => {
                         </div>
                     </CardContent>
                 </Card>
-                  <div className="text-center mt-8 text-sm">
-                Zarnika© 2025 Ziba Nouri. All Rights Reserved. Made with love
-                by ✨
-                <a
-                    className="pl-1 text-pink-950 hover:text-pink-700 duration-300"
-                    target="blank"
-                    href="https://github.com/zibanouri"
-                >
-                    Ziba
-                </a>
-            </div>
+                <div className="text-center mt-8 text-sm">
+                    Zarnika© 2025 Ziba Nouri. All Rights Reserved. Made with
+                    love by ✨
+                    <a
+                        className="pl-1 text-pink-950 hover:text-pink-700 duration-300"
+                        target="blank"
+                        href="https://github.com/zibanouri"
+                    >
+                        Ziba
+                    </a>
+                </div>
             </div>
         </div>
     );
