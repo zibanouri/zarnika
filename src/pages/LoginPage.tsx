@@ -90,10 +90,9 @@ const LoginPage = () => {
                                             setshowPassword(!showPassword)
                                         }
                                     >
-                                        {showPassword ? (
-                                            <EyeClosed className="h-4 w-4 text-slate-800" />
-                                        ) : (
-                                            <Eye className="h-4 w-4 text-slate-800" />
+                                        {showPassword ? ( 
+                                            <Eye className="h-4 w-4 text-slate-800" />) :
+                                           ( <EyeClosed className="h-4 w-4 text-slate-800" />  
                                         )}
                                     </Button>
                                 </div>
