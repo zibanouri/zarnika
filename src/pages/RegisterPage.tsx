@@ -37,7 +37,6 @@ const RegisterPage = () => {
         <div className="min-h-screen bg-gradient-to-br from-background to-slate-200 flex items-center justify-center p-4">
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
-                    {/* <h1 className="text-3xl font-bold text-slate-800">Zarnika</h1> */}
                     <p className="mt-2 text-slate-700">
                         Create account to get started
                     </p>
