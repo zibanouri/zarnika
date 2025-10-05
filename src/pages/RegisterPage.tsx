@@ -102,7 +102,9 @@ const RegisterPage = () => {
                                     <Input
                                         id="password"
                                         name="password"
-                                        type={showPassword ? 'text' : 'password'}
+                                        type={
+                                            showPassword ? 'text' : 'password'
+                                        }
                                         placeholder="Enter your password"
                                         className="pl-10"
                                         required
@@ -112,25 +114,30 @@ const RegisterPage = () => {
                                         variant="ghost"
                                         size="sm"
                                         className="absolute right-0 top-0 h-full px-3 hover:bg-transparent"
-                                        onClick={() => setShowPassword(!showPassword)}
+                                        onClick={() =>
+                                            setShowPassword(!showPassword)
+                                        }
                                     >
                                         {showPassword ? (
                                             <Eye className="h-4 w-4 text-slate-800" />
-                                        ) :
-                                            (
-                                                <EyeClosed className="h-4 w-4 text-slate-800" />
-                                            )}
+                                        ) : (
+                                            <EyeClosed className="h-4 w-4 text-slate-800" />
+                                        )}
                                     </Button>
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <Label htmlFor="password2">Confirm Password</Label>
+                                <Label htmlFor="password2">
+                                    Confirm Password
+                                </Label>
                                 <div className="relative">
                                     <ShieldPlus className="absolute left-3 top-[10px] h-4 w-4 text-slate-800" />
                                     <Input
                                         id="password2"
                                         name="password2"
-                                        type={showPassword ? 'text' : 'password'}
+                                        type={
+                                            showPassword ? 'text' : 'password'
+                                        }
                                         placeholder="Repeat your password"
                                         className="pl-10"
                                         required
@@ -181,7 +188,8 @@ const RegisterPage = () => {
                     </CardContent>
                 </Card>
                 <div className="text-center mt-8 text-xs text-muted-foreground">
-                    Zarnika© 2025 Ziba Nouri. All Rights Reserved. Made with ✨ by
+                    Zarnika© 2025 Ziba Nouri. All Rights Reserved. Made with ✨
+                    by
                     <a
                         className="pl-1.5 text-pink-950 hover:text-pink-700 duration-300"
                         href="https://github.com/zibanouri"

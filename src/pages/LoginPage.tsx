@@ -26,8 +26,8 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
     const navigate = useNavigate();
     const [showPassword, setshowPassword] = useState(true);
-    const handleLogine = (e: React.FormEvent) =>{
-            e.preventDefault();
+    const handleLogine = (e: React.FormEvent) => {
+        e.preventDefault();
         navigate('/');
     };
     return (
@@ -35,12 +35,12 @@ const LoginPage = () => {
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
                     <div className="flex justify-center">
-            <img 
-                src="public/fav..png" 
-                alt="Zarnika Logo" 
-                className="w-16 h-auto"
-            />
-        </div>
+                        <img
+                            src="public/fav..png"
+                            alt="Zarnika Logo"
+                            className="w-16 h-auto"
+                        />
+                    </div>
                     <p className="mt-2 text-slate-700">
                         Welcome back to your dashboard
                     </p>
@@ -94,9 +94,10 @@ const LoginPage = () => {
                                             setshowPassword(!showPassword)
                                         }
                                     >
-                                        {showPassword ? ( 
-                                            <Eye className="h-4 w-4 text-slate-800" />) :
-                                           ( <EyeClosed className="h-4 w-4 text-slate-800" />  
+                                        {showPassword ? (
+                                            <Eye className="h-4 w-4 text-slate-800" />
+                                        ) : (
+                                            <EyeClosed className="h-4 w-4 text-slate-800" />
                                         )}
                                     </Button>
                                 </div>
