@@ -34,9 +34,13 @@ const LoginPage = () => {
         <div className="min-h-screen bg-gradient-to-br from-background to-slate-200 flex items-center justify-center p-4">
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-slate-800">
-                        zarnika
-                    </h1>
+                    <div className="flex justify-center">
+            <img 
+                src="public/fav..png" 
+                alt="Zarnika Logo" 
+                className="w-16 h-auto"
+            />
+        </div>
                     <p className="mt-2 text-slate-700">
                         Welcome back to your dashboard
                     </p>
