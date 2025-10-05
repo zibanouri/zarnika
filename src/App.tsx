@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Index from './pages/Index';
-import Login from './pages/LoginPage';
-import Register from './pages/Register';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
         <BrowserRouter basename="/zarnika">
             <Routes>
                 <Route path="/" element={<Index />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
