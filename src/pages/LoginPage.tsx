@@ -26,6 +26,10 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
     const navigate = useNavigate();
     const [showPassword, setshowPassword] = useState(true);
+    const handleLogine = (e: React.FormEvent) =>{
+            e.preventDefault();
+        navigate('/');
+    };
     return (
         <div className="min-h-screen bg-gradient-to-br from-background to-slate-200 flex items-center justify-center p-4">
             <div className="w-full max-w-md">
@@ -48,7 +52,7 @@ const LoginPage = () => {
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                        <form className="space-y-4">
+                        <form className="space-y-4" onSubmit={handleLogine}>
                             <div className="space-y-2">
                                 <Label htmlFor="email">Email</Label>
                                 <div className="relative">
