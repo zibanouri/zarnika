@@ -1,22 +1,28 @@
 interface DashboardContentProps {
     currentPage: string;
 }
-const DashboardContent = ({ currentPage }: DashboardContentProps) => {
+export const DashboardContent = ({ currentPage }: DashboardContentProps) => {
     const renderContent = () => {
         switch (currentPage) {
             default:
                 return (
-                    <div className="space-6">
-                        This id dashboard content
+                    <div className="space-y-6">
+                        <div className="bg-gradient-to-r from-pink-500 to-purple-400 rounded-2xl p-8 text-white relative overflow-hidden">
+                            <div className="relative z-10">
+                                <h1 className="text-3xl font-bold mb-2">
+                                    It's good to see you back, ziba!
+                                </h1>
+                                <p className="text-white/90 text-lg">
+                                    I am very happy to meet you again.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                )
-            }
-    }
-    return (
-<div className="p-6 animate-fade-in">
-{renderContent()}
-</div>
-    )
-}
+                );
+        }
+    };
+
+    return <div className="p-6 animate-fade-in">{renderContent()}</div>;
+};
 
 export default DashboardContent;

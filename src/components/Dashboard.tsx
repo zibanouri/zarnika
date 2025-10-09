@@ -1,15 +1,16 @@
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+// import { useState } from 'react';
 import Footer from './Footer';
 import DashboardHeader from './DashboardHeader';
 import DashboardSidebar from './DashboardSidebar';
 import DashboardContent from './DashboardContent';
+// import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-   const currentPage = 'dashboard';
+    const currentPage = 'dashboard';
+    // const [currentPage, setCurrentPage] = useState("dashboard");
     // const navigate = useNavigate();
 
-    // const handelPageChange = (page: string) => {
+    // const handlePageChange = (page: string) => {
     //     setCurrentPage(page);
     //     switch (page) {
     //         case "dashboard":
@@ -17,7 +18,7 @@ const Dashboard = () => {
     //             navigate("/");
     //             break
     //     }
-    // };
+    // }
     return (
         <div className="min-h-screen">
             <DashboardHeader />
