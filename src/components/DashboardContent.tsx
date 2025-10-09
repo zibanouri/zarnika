@@ -1,4 +1,5 @@
-import WelcomeSection from './Dashboard/WelcomeSection';
+import WelcomeSection from '@/components/Dashboard/WelcomeSection';
+import StatsCards from '@/components/Dashboard/StatsCards';
 interface DashboardContentProps {
     currentPage: string;
 }
@@ -9,6 +10,7 @@ export const DashboardContent = ({ currentPage }: DashboardContentProps) => {
                 return (
                     <div className="space-y-6">
                         <WelcomeSection />
+                        <StatsCards />
                     </div>
                 );
         }
