@@ -4,7 +4,7 @@ import ChartWidget from '@/components/Dashboard/ChartWidget';
 interface DashboardContentProps {
     currentPage: string;
 }
-export const DashboardContent = ({ currentPage }: DashboardContentProps) => {
+  const DashboardContent = ({ currentPage }: DashboardContentProps) => {
     const renderContent = () => {
         switch (currentPage) {
             default:
@@ -12,7 +12,11 @@ export const DashboardContent = ({ currentPage }: DashboardContentProps) => {
                     <div className="space-y-6">
                         <WelcomeSection />
                         <StatsCards />
-                        <ChartWidget />
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                            <div className="lg:col-span-3 space-y-6">
+                                <ChartWidget />
+                            </div>
+                        </div>
                     </div>
                 );
         }
@@ -20,5 +24,6 @@ export const DashboardContent = ({ currentPage }: DashboardContentProps) => {
 
     return <div className="p-6 animate-fade-in">{renderContent()}</div>;
 };
+
 
 export default DashboardContent;
