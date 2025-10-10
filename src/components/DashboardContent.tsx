@@ -1,5 +1,6 @@
 import WelcomeSection from '@/components/Dashboard/WelcomeSection';
 import StatsCards from '@/components/Dashboard/StatsCards';
+import ChartWidget from '@/components/Dashboard/ChartWidget';
 interface DashboardContentProps {
     currentPage: string;
 }
@@ -11,6 +12,7 @@ export const DashboardContent = ({ currentPage }: DashboardContentProps) => {
                     <div className="space-y-6">
                         <WelcomeSection />
                         <StatsCards />
+                        <ChartWidget />
                     </div>
                 );
         }
