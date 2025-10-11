@@ -1,7 +1,7 @@
 const WelcomeSection = () => {
     return (
         <div>
-            <div className="bg-gradient-to-r from-pink-600 to-amber-200 rounded-xl p-5 text-white max-w-2xl">
+            <div className="bg-gradient-to-r from-amber-400 to-amber-200 rounded-xl p-5 text-white max-w-2xl">
                 <h1 className="text-xl font-semibold">
                     It's good to see you back, Ziba!
                 </h1>

@@ -6,10 +6,11 @@ export const ChartWidget = () => {
     const [activeMetric, setActiveMetric] = useState<'revenue' | 'users'>(
         'users'
     );
+
     return (
         <Card>
-            <CardHeader className="flex flex-row items-center justify justify-between ">
-                <CardTitle>Performanc Overview</CardTitle>
+            <CardHeader className="flex flex-row items-center justify-between">
+                <CardTitle>Performance Overview</CardTitle>
                 <div className="flex gap-2">
                     <Button
                         variant={
@@ -20,6 +21,7 @@ export const ChartWidget = () => {
                     >
                         Revenue
                     </Button>
+
                     <Button
                         variant={
                             activeMetric === 'users' ? 'default' : 'outline'
