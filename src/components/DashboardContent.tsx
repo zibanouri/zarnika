@@ -4,7 +4,7 @@ import ChartWidget from '@/components/Dashboard/ChartWidget';
 interface DashboardContentProps {
     currentPage: string;
 }
-  const DashboardContent = ({ currentPage }: DashboardContentProps) => {
+const DashboardContent = ({ currentPage }: DashboardContentProps) => {
     const renderContent = () => {
         switch (currentPage) {
             default:
@@ -24,6 +24,5 @@ interface DashboardContentProps {
 
     return <div className="p-6 animate-fade-in">{renderContent()}</div>;
 };
-
 
 export default DashboardContent;

@@ -1,19 +1,38 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '../ui/button';
-const ChartWidget = () => {
-    return (
-        <Card className='bg-red-300'>
-        <CardHeader className='flex flex-row items-center '>
-      <CardTitle>
-        Performanc Overview
-      </CardTitle>
-      <div className='flex gap-2'>
+import { useState } from 'react';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
-      </div>
-        </CardHeader>
+export const ChartWidget = () => {
+    const [activeMetric, setActiveMetric] = useState<'revenue' | 'users'>(
+        'users'
+    );
+    return (
+        <Card>
+            <CardHeader className="flex flex-row items-center justify justify-between ">
+                <CardTitle>Performanc Overview</CardTitle>
+                <div className="flex gap-2">
+                    <Button
+                        variant={
+                            activeMetric === 'revenue' ? 'default' : 'outline'
+                        }
+                        size="sm"
+                        onClick={() => setActiveMetric('revenue')}
+                    >
+                        Revenue
+                    </Button>
+                    <Button
+                        variant={
+                            activeMetric === 'users' ? 'default' : 'outline'
+                        }
+                        size="sm"
+                        onClick={() => setActiveMetric('users')}
+                    >
+                        Users
+                    </Button>
+                </div>
+            </CardHeader>
         </Card>
-    )
-    
+    );
 };
 
 export default ChartWidget;
