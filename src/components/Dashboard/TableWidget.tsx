@@ -1,5 +1,19 @@
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {Button} from '@/components/ui/button'
 const TableWidget = () => {
-    return (<div className="p-4 bg-yellow-800 text-black font-bold">این TableWidget هست!</div>)
+    return (
+        <Card>
+            <CardHeader className='flex flex-row items-center justify-between'>
+             <CardTitle>
+                Recent Orders
+             </CardTitle>
+             <Button variant="outline" size="sm">
+                View all
+
+             </Button>
+            </CardHeader>
+        </Card>
+    )
 };
 
 export default TableWidget;
