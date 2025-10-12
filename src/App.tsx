@@ -4,7 +4,6 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import NotFound from './pages/NotFound';
 
-
 function App() {
     return (
         <BrowserRouter basename="/zarnika">
