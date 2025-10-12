@@ -17,7 +17,7 @@ type MonthData = {
   users: number;
 };
 
-const Data: MonthData[] = [
+const Data = [
   { month: 'Jan', revenue: 4000, users: 2400 },
   { month: 'Feb', revenue: 3000, users: 1398 },
   { month: 'Mar', revenue: 2000, users: 9800 },
