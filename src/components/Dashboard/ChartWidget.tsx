@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import {
     BarChart,
     Bar,
-    Rectangle,
     XAxis,
     YAxis,
     CartesianGrid,
@@ -15,51 +14,93 @@ import {
 
 const data = [
     {
-        name: 'Page A',
+        name: 'Jan',
         revenue: 4000,
         users: 2400,
-        amt: 1400,
+        views: 1400,
     },
     {
-        name: 'Page B',
+        name: 'Feb',
         revenue: 3000,
         users: 1398,
-        amt: 2210,
+        views: 2210,
     },
     {
-        name: 'Page C',
+        name: 'Mar',
         revenue: 2000,
         users: 9800,
-        amt: 1290,
+        views: 1290,
     },
     {
-        name: 'Page D',
+        name: 'Apr',
         revenue: 2780,
         users: 3908,
-        amt: 1700,
+        views: 1700,
     },
     {
-        name: 'Page E',
+        name: 'May',
         revenue: 1890,
         users: 4800,
-        amt: 2500,
+        views: 2500,
     },
     {
-        name: 'Page F',
+        name: 'Jun',
         revenue: 2390,
         users: 3800,
-        amt: 1100,
+        views: 1100,
     },
     {
-        name: 'Page G',
+        name: 'Jul',
         revenue: 3490,
         users: 4300,
-        amt: 2180,
+        views: 2180,
     },
+{
+        name: 'Aug',
+        revenue: 4000,
+        users: 2400,
+        views: 1400,
+    },
+    {
+        name: 'Sep',
+        revenue: 3000,
+        users: 1398,
+        views: 2210,
+    },
+    {
+        name: 'Oct',
+        revenue: 2000,
+        users: 9800,
+        views: 1290,
+    },
+    {
+        name: 'Nov',
+        revenue: 2780,
+        users: 3908,
+        views: 1700,
+    },
+    {
+        name: 'Dec',
+        revenue: 1890,
+        users: 4800,
+        views: 2500,
+    },
+
 ];
+
+const colorChange = (status:string) =>{
+    switch (status) {
+        case "revenue":
+            return "#FF9B50" ;
+        case "users":
+            return "#E25E3E";
+        case "views":
+            return "#C63D2F";        
+    }
+}  
 const ChartWidget = () => {
     const [activeMetric, setActiveMetric] = useState<
-        'revenue' | 'users' | 'amt'
+        'revenue' | 'users' | 'views'
     >('revenue');
     return (
         <Card>
@@ -85,11 +126,11 @@ const ChartWidget = () => {
                         Users
                     </Button>
                     <Button
-                        variant={activeMetric === 'amt' ? 'default' : 'outline'}
+                        variant={activeMetric === 'views' ? 'default' : 'outline'}
                         size="sm"
-                        onClick={() => setActiveMetric('amt')}
+                        onClick={() => setActiveMetric('views')}
                     >
-                        Amt
+                        Views
                     </Button>
                 </div>
             </CardHeader>
@@ -107,21 +148,7 @@ const ChartWidget = () => {
                             <YAxis />
                             <Tooltip />
                             <Legend />
-                            <Bar dataKey={activeMetric} fill="#fbbf21" />
-                            <Bar
-                                dataKey="pv"
-                                fill="#8884d8"
-                                activeBar={
-                                    <Rectangle fill="pink" stroke="blue" />
-                                }
-                            />
-                            <Bar
-                                dataKey="uv"
-                                fill="#82ca9d"
-                                activeBar={
-                                    <Rectangle fill="gold" stroke="purple" />
-                                }
-                            />
+                            <Bar dataKey={activeMetric} fill={colorChange(activeMetric)} />
                         </BarChart>
                     </ResponsiveContainer>
                 </div>
