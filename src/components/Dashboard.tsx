@@ -21,13 +21,13 @@ const Dashboard = () => {
     // }
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen">
             <DashboardHeader />
 
-            <div className="flex flex-1">
+            <div className="flex">
                 <DashboardSidebar />
 
-                <main className="flex flex-col flex-1 transition-all duration-300 ml-64 pt-16">
+                <main className="flex-1 transition-all duration-300 ml-64 pt-16 min-h-screen flex flex-col overflow-x-hidden">
                     <div className="flex-1">
                         <DashboardContent currentPage={currentPage} />
                     </div>

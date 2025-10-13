@@ -1,94 +1,77 @@
 import { useState } from 'react';
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import {
-    LineChart,
-    Line,
+    BarChart,
+    Bar,
+    Rectangle,
     XAxis,
     YAxis,
     CartesianGrid,
     Tooltip,
+    Legend,
     ResponsiveContainer,
 } from 'recharts';
 
-type MonthData = {
-    month: string;
-    revenue: number;
-    users: number;
-};
-
-const Data = [
-    { month: 'Jan', revenue: 4000, users: 2400 },
-    { month: 'Feb', revenue: 3000, users: 1398 },
-    { month: 'Mar', revenue: 2000, users: 9800 },
-    { month: 'Apr', revenue: 2780, users: 3908 },
-    { month: 'May', revenue: 1890, users: 4800 },
-    { month: 'Jun', revenue: 2390, users: 3800 },
-    { month: 'Jul', revenue: 3490, users: 4300 },
-    { month: 'Aug', revenue: 4000, users: 2400 },
-    { month: 'Sep', revenue: 3000, users: 1398 },
-    { month: 'Oct', revenue: 2000, users: 9800 },
-    { month: 'Nov', revenue: 2780, users: 3908 },
-    { month: 'Dec', revenue: 1890, users: 4800 },
+const data = [
+    {
+        name: 'Page A',
+        revenue: 4000,
+        users: 2400,
+        amt: 1400,
+    },
+    {
+        name: 'Page B',
+        revenue: 3000,
+        users: 1398,
+        amt: 2210,
+    },
+    {
+        name: 'Page C',
+        revenue: 2000,
+        users: 9800,
+        amt: 1290,
+    },
+    {
+        name: 'Page D',
+        revenue: 2780,
+        users: 3908,
+        amt: 1700,
+    },
+    {
+        name: 'Page E',
+        revenue: 1890,
+        users: 4800,
+        amt: 2500,
+    },
+    {
+        name: 'Page F',
+        revenue: 2390,
+        users: 3800,
+        amt: 1100,
+    },
+    {
+        name: 'Page G',
+        revenue: 3490,
+        users: 4300,
+        amt: 2180,
+    },
 ];
-
-const AMBER_COLOR = '#FFA000';
-interface CustomDotProps {
-    cx?: number;
-    cy?: number;
-    payload?: MonthData;
-    onClick?: (payload: MonthData) => void;
-}
-
-const CustomDot = ({ cx, cy, payload, onClick }: CustomDotProps) => {
-    if (cx === undefined || cy === undefined || !payload) return null;
-
-    return (
-        <circle
-            cx={cx}
-            cy={cy}
-            r={6}
-            fill={AMBER_COLOR}
-            stroke="#fff"
-            strokeWidth={2}
-            style={{ cursor: 'pointer' }}
-            onClick={() => onClick?.(payload)}
-        />
-    );
-};
-
 const ChartWidget = () => {
-    const [activeMetric, setActiveMetric] = useState<'revenue' | 'users'>(
-        'users'
-    );
-    const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
-    const handleDotClick = (payload: MonthData) => {
-        console.log('Selected month:', payload.month);
-        setSelectedMonth(payload.month);
-    };
-
+    const [activeMetric, setActiveMetric] = useState<
+        'revenue' | 'users' | 'amt'
+    >('revenue');
     return (
-        <Card className="h-full">
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-                <div>
-                    <CardTitle>Performance Overview</CardTitle>
-                    {selectedMonth && (
-                        <p className="text-sm text-muted-foreground mt-1">
-                            Selected:{' '}
-                            <span className="font-medium">{selectedMonth}</span>
-                        </p>
-                    )}
-                </div>
+        <Card>
+            <CardHeader className="flex flex-row items-center justify-between">
+                <CardTitle>Performance Overview</CardTitle>
                 <div className="flex gap-2">
                     <Button
                         variant={
                             activeMetric === 'revenue' ? 'default' : 'outline'
                         }
                         size="sm"
-                        onClick={() => {
-                            setActiveMetric('revenue');
-                            setSelectedMonth(null);
-                        }}
+                        onClick={() => setActiveMetric('revenue')}
                     >
                         Revenue
                     </Button>
@@ -97,43 +80,53 @@ const ChartWidget = () => {
                             activeMetric === 'users' ? 'default' : 'outline'
                         }
                         size="sm"
-                        onClick={() => {
-                            setActiveMetric('users');
-                            setSelectedMonth(null);
-                        }}
+                        onClick={() => setActiveMetric('users')}
                     >
                         Users
                     </Button>
+                    <Button
+                        variant={activeMetric === 'amt' ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setActiveMetric('amt')}
+                    >
+                        Amt
+                    </Button>
                 </div>
             </CardHeader>
-            <div className="h-[300px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                    <LineChart
-                        data={Data}
-                        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="month" />
-                        <YAxis />
-                        <Tooltip />
-                        <Line
-                            type="monotone"
-                            dataKey={activeMetric}
-                            stroke={AMBER_COLOR}
-                            strokeWidth={2}
-                            dot={<CustomDot onClick={handleDotClick} />}
-                            activeDot={{
-                                r: 8,
-                                fill: AMBER_COLOR,
-                                stroke: '#fff',
-                                strokeWidth: 2,
-                            }}
-                        />
-                    </LineChart>
-                </ResponsiveContainer>
-            </div>
+            <CardContent>
+                <div className="h-80">
+                    <ResponsiveContainer width="100%" height="100%">
+                        <BarChart
+                            width={500}
+                            height={300}
+                            data={data}
+                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                        >
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend />
+                            <Bar dataKey={activeMetric} fill="#fbbf24" />
+                            <Bar
+                                dataKey="pv"
+                                fill="#8884d8"
+                                activeBar={
+                                    <Rectangle fill="pink" stroke="blue" />
+                                }
+                            />
+                            <Bar
+                                dataKey="uv"
+                                fill="#82ca9d"
+                                activeBar={
+                                    <Rectangle fill="gold" stroke="purple" />
+                                }
+                            />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
+            </CardContent>
         </Card>
     );
 };
-
 export default ChartWidget;
