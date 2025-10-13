@@ -8,7 +8,7 @@ const recentOrders = [
         id: '#2852',
         user: {
             name: 'John Doe',
-            avatar: '/cores/dashboard/avatar3.webp',
+            avatar: '/zarnika/dashboard/avatar3.webp',
         },
         product: 'Pro Plan',
         amount: '$69.00',
@@ -19,7 +19,7 @@ const recentOrders = [
         id: '#2853',
         user: {
             name: 'Sarah Johnson',
-            avatar: '/cores/dashboard/avatar.webp',
+            avatar: '/zarnika/dashboard/avatar.webp',
         },
         product: 'Premium Plan',
         amount: '$99.00',
@@ -29,7 +29,7 @@ const recentOrders = [
     {
         id: '#2854',
         user: {
-            name: 'Farzad Asgari',
+            name: 'ziba nouri',
             avatar: '..',
         },
         product: 'Basic Plan',
@@ -41,7 +41,7 @@ const recentOrders = [
         id: '#2855',
         user: {
             name: 'John Smith',
-            avatar: '/cores/dashboard/avatar2.webp',
+            avatar: '/zarnika/dashboard/avatar2.webp',
         },
         product: 'Enterprise Plan',
         amount: '$199.00',
@@ -62,8 +62,7 @@ const getStatusColor = (status: string) => {
             return 'bg-slate-100 hover:bg-slate-200 text-slate-900';
     }
 };
-
-export const TableWidget = () => {
+ const TableWidget = () => {
     return (
         <Card>
             <CardHeader className="flex flex-row items-center justify-between">
@@ -118,3 +117,4 @@ export const TableWidget = () => {
         </Card>
     );
 };
+export default TableWidget;
