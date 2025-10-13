@@ -1,7 +1,7 @@
 import WelcomeSection from '@/components/Dashboard/WelcomeSection';
 import StatsCards from '@/components/Dashboard/StatsCards';
 import ChartWidget from '@/components/Dashboard/ChartWidget';
-import  TableWidget  from '@/components/Dashboard/TableWidget';
+import TableWidget from '@/components/Dashboard/TableWidget';
 
 interface DashboardContentProps {
     currentPage: string;

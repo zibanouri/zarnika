@@ -107,7 +107,7 @@ const ChartWidget = () => {
                             <YAxis />
                             <Tooltip />
                             <Legend />
-                            <Bar dataKey={activeMetric} fill="#fbbf24" />
+                            <Bar dataKey={activeMetric} fill="#fbbf21" />
                             <Bar
                                 dataKey="pv"
                                 fill="#8884d8"

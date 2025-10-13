@@ -8,7 +8,7 @@ const recentOrders = [
         id: '#2852',
         user: {
             name: 'John Doe',
-            avatar: '/zarnika/dashboard/avatar3.webp',
+            avatar: '/zarnika/avatar/profile3.png',
         },
         product: 'Pro Plan',
         amount: '$69.00',
@@ -19,7 +19,7 @@ const recentOrders = [
         id: '#2853',
         user: {
             name: 'Sarah Johnson',
-            avatar: '/zarnika/dashboard/avatar.webp',
+            avatar: '/zarnika/avatar/profile3.png',
         },
         product: 'Premium Plan',
         amount: '$99.00',
@@ -30,7 +30,7 @@ const recentOrders = [
         id: '#2854',
         user: {
             name: 'ziba nouri',
-            avatar: '..',
+            avatar: '/zarnika/avatar/profile3.png',
         },
         product: 'Basic Plan',
         amount: '$39.00',
@@ -41,7 +41,7 @@ const recentOrders = [
         id: '#2855',
         user: {
             name: 'John Smith',
-            avatar: '/zarnika/dashboard/avatar2.webp',
+            avatar: '/zarnika/avatar/profile3.png',
         },
         product: 'Enterprise Plan',
         amount: '$199.00',
@@ -53,21 +53,25 @@ const recentOrders = [
 const getStatusColor = (status: string) => {
     switch (status) {
         case 'completed':
-            return 'bg-emerald-100 hover:bg-emerald-200 text-emerald-900';
+            return 'bg-pink-100 hover:bg-pink-200 text-pink-900';
         case 'pending':
-            return 'bg-amber-100 hover:bg-amber-200 text-amber-900';
+            return 'bg-purple-100 hover:bg-purple-200 text-purple-900';
         case 'failed':
-            return 'bg-red-100 hover:bg-red-200 text-red-900';
+            return 'bg-yellow-100 hover:bg-yellow-200 text-yellow-900';
         default:
-            return 'bg-slate-100 hover:bg-slate-200 text-slate-900';
+            return 'bg-blue-100 hover:bg-blue-200 text-blue-900';
     }
 };
- const TableWidget = () => {
+const TableWidget = () => {
     return (
         <Card>
             <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle>Recent Orders</CardTitle>
-                <Button variant="outline" size="sm">
+                <Button
+                    variant="outline"
+                    size="sm"
+                    className="bg-amber-300 hover:bg-amber-400"
+                >
                     View All
                 </Button>
             </CardHeader>
