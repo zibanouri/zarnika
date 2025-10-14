@@ -55,7 +55,7 @@ const data = [
         users: 4300,
         views: 2180,
     },
-{
+    {
         name: 'Aug',
         revenue: 4000,
         users: 2400,
@@ -85,19 +85,18 @@ const data = [
         users: 4800,
         views: 2500,
     },
-
 ];
 
-const colorChange = (status:string) =>{
+const colorChange = (status: string) => {
     switch (status) {
-        case "revenue":
-            return "#FF9B50" ;
-        case "users":
-            return "#E25E3E";
-        case "views":
-            return "#C63D2F";        
+        case 'revenue':
+            return '#FF9B50';
+        case 'users':
+            return '#E25E3E';
+        case 'views':
+            return '#C63D2F';
     }
-}  
+};
 const ChartWidget = () => {
     const [activeMetric, setActiveMetric] = useState<
         'revenue' | 'users' | 'views'
@@ -126,7 +125,9 @@ const ChartWidget = () => {
                         Users
                     </Button>
                     <Button
-                        variant={activeMetric === 'views' ? 'default' : 'outline'}
+                        variant={
+                            activeMetric === 'views' ? 'default' : 'outline'
+                        }
                         size="sm"
                         onClick={() => setActiveMetric('views')}
                     >
@@ -148,7 +149,10 @@ const ChartWidget = () => {
                             <YAxis />
                             <Tooltip />
                             <Legend />
-                            <Bar dataKey={activeMetric} fill={colorChange(activeMetric)} />
+                            <Bar
+                                dataKey={activeMetric}
+                                fill={colorChange(activeMetric)}
+                            />
                         </BarChart>
                     </ResponsiveContainer>
                 </div>

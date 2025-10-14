@@ -21,8 +21,9 @@ const DashboardContent = ({ currentPage }: DashboardContentProps) => {
                                 <ChartWidget />
                                 <TableWidget />
                             </div>
-                            <div className="space-y-6"></div>
-                            <QuickActions />
+                            <div className="space-y-6">
+                                <QuickActions />
+                            </div>
                         </div>
                     </div>
                 );
@@ -31,6 +32,5 @@ const DashboardContent = ({ currentPage }: DashboardContentProps) => {
 
     return <div className="p-6 animate-fade-in">{renderContent()}</div>;
 };
-
 
 export default DashboardContent;
