@@ -10,13 +10,12 @@ const ActivityFeed = () => {
                     Recent Activity
                 </CardTitle>
             </CardHeader>
-            <CardContent className='space-y-4'>
-                <div className='space-y-4'>
+            <CardContent className="space-y-4">
+                <div className="space-y-4">
                     <Avatar className="h-8 w-8 flex-shrink-0">
                         <AvatarImage src="zarnika/avatar/profile3.png" />
                         <AvatarFallback>ZN</AvatarFallback>
                     </Avatar>
-                    
                 </div>
             </CardContent>
         </Card>
