@@ -8,7 +8,7 @@ const recentOrders = [
         id: '#2852',
         user: {
             name: 'John Doe',
-            avatar: '/zarnika/avatar/profile3.png',
+            avatar: '/zarnika/avatar/image5.webp',
         },
         product: 'Pro Plan',
         amount: '$69.00',
@@ -19,7 +19,7 @@ const recentOrders = [
         id: '#2853',
         user: {
             name: 'Sarah Johnson',
-            avatar: '/zarnika/avatar/profile3.png',
+            avatar: '/zarnika/avatar/image2.webp',
         },
         product: 'Premium Plan',
         amount: '$99.00',
@@ -30,7 +30,7 @@ const recentOrders = [
         id: '#2854',
         user: {
             name: 'ziba nouri',
-            avatar: '/zarnika/avatar/profile3.png',
+            avatar: '/zarnika/avatar/image6.webp',
         },
         product: 'Basic Plan',
         amount: '$39.00',
@@ -41,7 +41,7 @@ const recentOrders = [
         id: '#2855',
         user: {
             name: 'John Smith',
-            avatar: '/zarnika/avatar/profile3.png',
+            avatar: '/zarnika/avatar/image3.webp',
         },
         product: 'Enterprise Plan',
         amount: '$199.00',
