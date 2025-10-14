@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card';
 import { AlarmClock } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { badge } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
 const ActivityFeed = () => {
     return (
         <Card>
@@ -13,18 +13,26 @@ const ActivityFeed = () => {
             </CardHeader>
             <CardContent >
                 <div className="space-y-4">
-                    <div className='flex items-start gap-2 rounded-lg hover:bg-accent/50 cursor-pointer'>
+                    <div className='flex items-start gap-2 rounded-lg hover:bg-accent/50 cursor-pointer justify-between'>
                         <Avatar className="h-8 w-8 flex-shrink-0 items-start gap-3">
                             <AvatarImage src="zarnika/avatar/profile3.png" />
                             <AvatarFallback>ZN</AvatarFallback>
                         </Avatar>
                         <div className='flex-1'>
-                            <div className='flex items-center gap-2 mb-1'>
-                                <span className='text-sm font-mono'>
+                            <div className='flex items-center gap-2 mb-1 justify-between'>
+                                <span className='text-sm font-mono '>
                                     Ziba Nouri
                                 </span>
-                            badge
+                                <Badge className='text-sm'>
+                                    Upload
+                                </Badge>
                             </div>
+                            <p className='text-sm text-muted-foreground'>
+                                Lorem ipsum, dolor sit amet consectetur.
+                            </p>
+                            <p  className='text-sm text-muted-foreground'>
+                                4 hours ago
+                            </p>
                         </div>
                     </div>
                 </div>
