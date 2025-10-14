@@ -25,14 +25,16 @@ const QuickActions = () => {
             <CardContent>
                 <div className="grid grid-cols-2 gap-3">
                     {actions.map((action, index) => {
-                        const Icon = action.icon; 
+                        const Icon = action.icon;
                         return (
                             <Button
                                 key={index}
                                 variant="outline"
                                 className="h-20 flex flex-col gap-2 hover:bg-accent"
                             >
-                                <div className={`p-2 rounded-lg text-white ${action.color}`}>
+                                <div
+                                    className={`p-2 rounded-lg text-white ${action.color}`}
+                                >
                                     <Icon className="h-5 w-5" />
                                 </div>
                                 <span className="text-sm">{action.label}</span>
