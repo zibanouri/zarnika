@@ -10,7 +10,7 @@ import {
 import { Button } from '../ui/button';
 const actions = [
     { icon: SmilePlus, label: 'NewProject', color: 'bg-red-300' },
-    { icon: Users, label: 'Team', color: 'bg-amber-300' },
+    { icon: Users, label: 'Users', color: 'bg-amber-300' },
     { icon: FileText, label: 'Document', color: 'bg-blue-300' },
     { icon: Upload, label: 'Upload', color: 'bg-green-300' },
     { icon: Download, label: 'Download', color: 'bg-indigo-300' },
@@ -19,7 +19,7 @@ const actions = [
 const QuickActions = () => {
     return (
         <Card>
-            <CardHeader className="flex flex-row items-center">
+            <CardHeader className="flex flex-col items-center ">
                 <CardTitle>QuickActions</CardTitle>
             </CardHeader>
             <CardContent>
@@ -30,7 +30,7 @@ const QuickActions = () => {
                             <Button
                                 key={index}
                                 variant="outline"
-                                className="h-20 flex flex-col gap-2 hover:bg-accent"
+                                className="h-20 flex justify-between gap-2 hover:bg-accent"
                             >
                                 <div
                                     className={`p-2 rounded-lg text-white ${action.color}`}
