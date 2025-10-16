@@ -6,19 +6,19 @@ const activities = [
     {
         id: 1,
         user: {
-            name: "Noah Williams",
-            avatar: "/zarnika/avatar/image1.webp",
+            name: 'Noah Williams',
+            avatar: '/zarnika/avatar/image1.webp',
         },
-        action: "Created a new project",
-        target: "Website redisign",
-        time: "10 min ago",
-        type: "Creat",
+        action: 'Created a new project',
+        target: 'Website redisign',
+        time: '10 min ago',
+        type: 'Creat',
     },
     {
         id: 2,
         user: {
             name: 'Alex Johnson',
-            avatar: "/zarnika/avatar/image5.webp",
+            avatar: '/zarnika/avatar/image5.webp',
         },
         action: 'Updated user profile',
         target: 'Account Settings',
@@ -28,8 +28,8 @@ const activities = [
     {
         id: 3,
         user: {
-            name: "Liam O’Connor",
-            avatar: "/zarnika/avatar/image2.webp",
+            name: 'Liam O’Connor',
+            avatar: '/zarnika/avatar/image2.webp',
         },
         action: 'Completed task',
         target: 'Database Migration',
@@ -39,15 +39,15 @@ const activities = [
     {
         id: 4,
         user: {
-            name: "Maria Schmidt",
-            avatar: "/zarnika/avatar/image6.webp",
+            name: 'Maria Schmidt',
+            avatar: '/zarnika/avatar/image6.webp',
         },
         action: 'Uploaded file',
         target: 'Design assets.zip',
         time: '2 hours ago',
         type: 'Upload',
     },
-]
+];
 
 const getTypeColor = (type: string) => {
     switch (type) {
