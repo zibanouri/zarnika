@@ -70,7 +70,7 @@ const TableWidget = () => {
                 <Button
                     variant="outline"
                     size="sm"
-                    className="bg-amber-300 hover:bg-amber-400"
+                    className="bg-amber-300 hover:bg-amber-400 cursor-pointer"
                 >
                     View All
                 </Button>
@@ -80,7 +80,7 @@ const TableWidget = () => {
                     {recentOrders.map((order) => (
                         <div
                             key={order.id}
-                            className="flex items-center justify-between p-4 rounded-lg border hover:bg-accent/50 transition-colors"
+                            className="flex items-center justify-between p-4 cursor-pointer rounded-lg border hover:bg-accent/50 transition-colors"
                         >
                             <div className="flex items-center gap-4">
                                 <Avatar className="h-10 w-10">

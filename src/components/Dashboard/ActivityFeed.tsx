@@ -65,7 +65,7 @@ const ActivityFeed = () => {
     return (
         <Card>
             <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 cursor-pointer">
                     <AlarmClock className="h-7 w-7" />
                     Recent Activity
                 </CardTitle>
