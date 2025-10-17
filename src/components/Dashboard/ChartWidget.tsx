@@ -90,11 +90,11 @@ const data = [
 const colorChange = (status: string) => {
     switch (status) {
         case 'revenue':
-            return '#A594F9';
+            return '#FFC145';
         case 'users':
-            return '#A3CCDA';
+            return '#EFB036';
         case 'views':
-            return '#BDE3C3';
+            return '#FF9D3D';
     }
 };
 const ChartWidget = () => {
