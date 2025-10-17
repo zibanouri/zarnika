@@ -12,7 +12,7 @@ const recentOrders = [
         },
         product: 'Pro Plan',
         amount: '$69.00',
-        status: 'unknown',
+        status: 'Unknown',
         date: '2025-10-12',
     },
     {
@@ -23,7 +23,7 @@ const recentOrders = [
         },
         product: 'Premium Plan',
         amount: '$99.00',
-        status: 'pending',
+        status: 'Pending',
         date: '2025-10-12',
     },
     {
@@ -34,7 +34,7 @@ const recentOrders = [
         },
         product: 'Basic Plan',
         amount: '$39.00',
-        status: 'failed',
+        status: 'Failed',
         date: '2025-10-12',
     },
     {
@@ -45,21 +45,21 @@ const recentOrders = [
         },
         product: 'Enterprise Plan',
         amount: '$199.00',
-        status: 'completed',
+        status: 'Completed',
         date: '2025-10-12',
     },
 ];
 
 const getStatusColor = (status: string) => {
     switch (status) {
-        case 'completed':
-            return 'bg-pink-300 hover:bg-pink-400 text-pink-900';
-        case 'pending':
-            return 'bg-purple-300 hover:bg-purple-400 text-purple-900';
-        case 'failed':
-            return 'bg-amber-300 hover:bg-amber-400 text-amber-900';
+        case 'Completed':
+            return 'bg-blue-200 hover:bg-blue-300 text-blue-900';
+        case 'Pending':
+            return 'bg-amber-200 hover:bg-amber-300 text-amber-900';
+        case 'Failed':
+            return 'bg-emerald-200 hover:bg-emerald-300 text-emerald-900';
         default:
-            return 'bg-blue-300 hover:bg-blue-400 text-blue-900';
+            return 'bg-red-200 hover:bg-red-300 text-red-900';
     }
 };
 const TableWidget = () => {
@@ -70,7 +70,7 @@ const TableWidget = () => {
                 <Button
                     variant="outline"
                     size="sm"
-                    className="bg-amber-300 hover:bg-amber-400 cursor-pointer"
+                    className="bg-amber-400 hover:bg-amber-300 cursor-pointer"
                 >
                     View All
                 </Button>
