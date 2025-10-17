@@ -23,7 +23,7 @@ const QuickActions = () => {
                 <CardTitle>QuickActions</CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-3">
                     {actions.map((action, index) => {
                         const Icon = action.icon;
                         return (
