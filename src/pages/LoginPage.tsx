@@ -36,7 +36,7 @@ const LoginPage = () => {
                 <div className="text-center mb-8">
                     <div className="flex justify-center">
                         <img
-                            src='/zarnika/avatar/fav..png'
+                            src="/zarnika/avatar/fav..png"
                             alt="Zarnika Logo"
                             className="w-16 h-auto"
                         />
