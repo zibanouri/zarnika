@@ -119,3 +119,22 @@
     @apply bg-background text-foreground;
   }
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary/20
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/60
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/80
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--gradient-from), var(--gradient-to));
+}
