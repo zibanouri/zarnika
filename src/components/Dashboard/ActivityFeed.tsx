@@ -57,7 +57,7 @@ const getTypeColor = (type: string) => {
             return 'bg-amber-200 hover:bg-amber-300 text-amber-900';
         case 'Create':
             return 'bg-red-200 hover:bg-red-300 text-red-900';
-        default:
+        case 'upload':
             return 'bg-blue-200 hover:bg-blue-300 text-blue-900';
     }
 };
