@@ -12,7 +12,7 @@ const activities = [
         action: 'Created a new project',
         target: 'Website redisign',
         time: '10 min ago',
-        type: 'Creat',
+        type: 'Create',
     },
     {
         id: 2,
@@ -57,7 +57,7 @@ const getTypeColor = (type: string) => {
             return 'bg-amber-200 hover:bg-amber-300 text-amber-900';
         case 'Create':
             return 'bg-red-200 hover:bg-red-300 text-red-900';
-        case 'upload':
+        case 'Upload':
             return 'bg-blue-200 hover:bg-blue-300 text-blue-900';
     }
 };
@@ -72,9 +72,9 @@ const ActivityFeed = () => {
             </CardHeader>
             <CardContent>
                 <div className="space-y-4">
-                    {activities.map((activity) => (
+                    {activities.map((activity, index) => (
                         <div
-                            key={activity.id}
+                            key={index}
                             className="flex items-start gap-2 border rounded-lg hover:bg-accent/50 cursor-pointer justify-between"
                         >
                             <Avatar className="h-8 w-8 flex-shrink-0">
@@ -98,7 +98,10 @@ const ActivityFeed = () => {
                                     </Badge>
                                 </div>
                                 <p className="text-sm text-muted-foreground">
-                                    Lorem ipsum, dolor sit amet consectetur.
+                                    {activity.action}{' '}
+                                    <span className="font-medium">
+                                        {activity.target}
+                                    </span>
                                 </p>
                                 <p className="text-xs text-muted-foreground mt-1">
                                     {activity.time}
