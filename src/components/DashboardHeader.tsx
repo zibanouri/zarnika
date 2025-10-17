@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Button } from './ui/button';
 import {
     Menu,
@@ -28,15 +28,7 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from '@/components/ui/popover';
-  const [darkMode, setDarkMode] = useState(false);
-
-    // useEffect(() => {
-    //     if (darkMode) {
-    //         document.documentElement.classList.add('dark');
-    //     } else {
-    //         document.documentElement.classList.remove('dark');
-    //     }
-    // }, [darkMode]);
+  
 
 const mockNotifications = [
     {
@@ -53,8 +45,17 @@ const mockNotifications = [
         unread: false,
     },
 ];
-
 const DashboardHeader = () => {
+const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [darkMode]);
+
     return (
         <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-amber-50 border-b border-amber-100 hover:border-amber-200 duration-300">
             <div className="flex items-center justify-between h-full px-4">
