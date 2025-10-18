@@ -6,6 +6,7 @@ import {
     Users,
     Download,
     Wrench,
+    Milestone,
 } from 'lucide-react';
 import { Button } from '../ui/button';
 const actions = [
@@ -20,7 +21,10 @@ const QuickActions = () => {
     return (
         <Card>
             <CardHeader className="flex flex-col items-center ">
-                <CardTitle>QuickActions</CardTitle>
+                <CardTitle className="flex items-center gap-2">
+                    <Milestone className="h-5 w-5" />
+                    Quick Actions
+                </CardTitle>
             </CardHeader>
             <CardContent>
                 <div className="grid grid-cols-2 gap-3">

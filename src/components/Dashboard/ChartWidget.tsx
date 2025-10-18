@@ -10,9 +10,8 @@ import {
     Tooltip,
     Legend,
     ResponsiveContainer,
-
 } from 'recharts';
-import {ChartColumnBig } from 'lucide-react';
+import { ChartColumnBig } from 'lucide-react';
 
 const data = [
     {
@@ -103,7 +102,9 @@ const colorChange = (status: string) => {
 };
 
 const ChartWidget = () => {
-    const [activeMetric, setActiveMetric] = useState<'revenue' | 'users' | 'views'>('revenue');
+    const [activeMetric, setActiveMetric] = useState<
+        'revenue' | 'users' | 'views'
+    >('revenue');
 
     return (
         <Card>
@@ -114,21 +115,27 @@ const ChartWidget = () => {
                 </CardTitle>
                 <div className="flex gap-2">
                     <Button
-                        variant={activeMetric === 'revenue' ? 'default' : 'outline'}
+                        variant={
+                            activeMetric === 'revenue' ? 'default' : 'outline'
+                        }
                         size="sm"
                         onClick={() => setActiveMetric('revenue')}
                     >
                         Revenue
                     </Button>
                     <Button
-                        variant={activeMetric === 'users' ? 'default' : 'outline'}
+                        variant={
+                            activeMetric === 'users' ? 'default' : 'outline'
+                        }
                         size="sm"
                         onClick={() => setActiveMetric('users')}
                     >
                         Users
                     </Button>
                     <Button
-                        variant={activeMetric === 'views' ? 'default' : 'outline'}
+                        variant={
+                            activeMetric === 'views' ? 'default' : 'outline'
+                        }
                         size="sm"
                         onClick={() => setActiveMetric('views')}
                     >

@@ -106,7 +106,9 @@ const DashboardHeader = () => {
                         </PopoverTrigger>
                         <PopoverContent className="w-80 p-0 cursor-pointer">
                             <div className="p-4 border-b cursor-pointer">
-                                <h3 className="font-semibold cursor-pointer">Notifications</h3>
+                                <h3 className="font-semibold cursor-pointer">
+                                    Notifications
+                                </h3>
                             </div>
                             <div className="max-h-64 overflow-y-auto cursor-pointer">
                                 {mockNotifications.map((notification) => (
@@ -141,7 +143,11 @@ const DashboardHeader = () => {
                             </div>
                         </PopoverContent>
                     </Popover>
-                    <Button variant="ghost" size="sm" className="rounded-full cursor-pointer">
+                    <Button
+                        variant="ghost"
+                        size="sm"
+                        className="rounded-full cursor-pointer"
+                    >
                         <Settings className="h-5 w-5" />
                     </Button>
                     <DropdownMenu>
