@@ -56,30 +56,30 @@ const DashboardHeader = () => {
     }, [darkMode]);
 
     return (
-        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-background hover:border-amber-200 duration-300">
-            <div className="flex items-center justify-between h-full px-4">
+        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-background hover:border-amber-200 duration-300 cursor-pointer">
+            <div className="flex items-center justify-between h-full px-4 cursor-pointer">
                 {/* Left Section */}
                 <div className="flex items-center gap-4">
                     <Button
                         variant="ghost"
                         size="sm"
-                        className="md:hidden rounded-full"
+                        className="md:hidden rounded-full cursor-pointer"
                     >
                         <Menu className="h-5 w-5" />
                     </Button>
                 </div>
-                <div className="hidden md:flex flex-1 max-w-md">
+                <div className="hidden md:flex flex-1 max-w-md cursor-pointer">
                     <form className="relative w-full">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground cursor-pointer" />
                         <input
                             type="text"
                             placeholder="Search Anything"
-                            className="w-full pl-10 pr-4 py-2 rounded-md border border-input bg-background text-foreground"
+                            className="w-full pl-10 pr-4 py-2 rounded-md border border-input bg-background text-foreground cursor-pointer"
                         />
                     </form>
                 </div>
                 {/* Right Section */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 cursor-pointer">
                     <Button
                         variant="ghost"
                         size="sm"
@@ -96,33 +96,33 @@ const DashboardHeader = () => {
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                className="relative rounded-full"
+                                className="relative rounded-full cursor-pointer"
                             >
                                 <Bell className="h-5 w-5" />
-                                <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 bg-red-400 flex items-center justify-center">
+                                <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 text-white bg-red-400 flex items-center justify-center">
                                     3
                                 </Badge>
                             </Button>
                         </PopoverTrigger>
-                        <PopoverContent className="w-80 p-0">
-                            <div className="p-4 border-b">
-                                <h3 className="font-semibold">Notifications</h3>
+                        <PopoverContent className="w-80 p-0 cursor-pointer">
+                            <div className="p-4 border-b cursor-pointer">
+                                <h3 className="font-semibold cursor-pointer">Notifications</h3>
                             </div>
-                            <div className="max-h-64 overflow-y-auto">
+                            <div className="max-h-64 overflow-y-auto cursor-pointer">
                                 {mockNotifications.map((notification) => (
                                     <div
                                         key={notification.id}
-                                        className="p-3 border-b hover:bg-muted/50"
+                                        className="p-3 border-b hover:bg-muted/50  cursor-pointer"
                                     >
-                                        <div className="flex items-start gap-3">
+                                        <div className="flex items-start gap-3 cursor-pointer">
                                             <div
                                                 className={`w-2 h-2 rounded-full mt-2 ${notification.unread ? 'bg-green-500' : 'bg-slate-300'}`}
                                             />
-                                            <div className="flex-1">
-                                                <p className="text-sm font-medium">
+                                            <div className="flex-1 cursor-pointer">
+                                                <p className="text-sm font-medium cursor-pointer">
                                                     {notification.title}
                                                 </p>
-                                                <p className="text-xs font-medium text-muted-foreground">
+                                                <p className="text-xs font-medium text-muted-foreground  cursor-pointer">
                                                     {notification.time}
                                                 </p>
                                             </div>
@@ -130,7 +130,7 @@ const DashboardHeader = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="p-3 border-t">
+                            <div className="p-3 border-t cursor-pointer">
                                 <Button
                                     variant="ghost"
                                     size="sm"
@@ -141,7 +141,7 @@ const DashboardHeader = () => {
                             </div>
                         </PopoverContent>
                     </Popover>
-                    <Button variant="ghost" size="sm" className="rounded-full">
+                    <Button variant="ghost" size="sm" className="rounded-full cursor-pointer">
                         <Settings className="h-5 w-5" />
                     </Button>
                     <DropdownMenu>
@@ -163,11 +163,11 @@ const DashboardHeader = () => {
 
                         <DropdownMenuContent className="w-56" align="end">
                             <DropdownMenuItem>
-                                <User className="h-4 w-4 mr-2" />
+                                <User className="h-4 w-4 mr-2 cursor-pointer" />
                                 Profile
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <Settings className="h-4 w-4 mr-2" />
+                                <Settings className="h-4 w-4 mr-2 cursor-pointer" />
                                 Settings
                             </DropdownMenuItem>
 
@@ -175,18 +175,18 @@ const DashboardHeader = () => {
 
                             <DropdownMenuItem asChild>
                                 <a href="/zarnika/register">
-                                    <UserPlus className="h-4 w-4 mr-2" />
+                                    <UserPlus className="h-4 w-4 mr-2 cursor-pointer" />
                                     Register
                                 </a>
                             </DropdownMenuItem>
                             <DropdownMenuItem asChild>
                                 <a href="/zarnika/login">
-                                    <LogIn className="h-4 w-4 mr-2" />
+                                    <LogIn className="h-4 w-4 mr-2 cursor-pointer" />
                                     Login
                                 </a>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <LogOut className="h-4 w-4 mr-2" />
+                                <LogOut className="h-4 w-4 mr-2 cursor-pointer" />
                                 Logout
                             </DropdownMenuItem>
 
@@ -197,7 +197,7 @@ const DashboardHeader = () => {
                                     href="https://github.com/zibanouri"
                                     target="_blank"
                                 >
-                                    <Github className="h-4 w-4 mr-2" />
+                                    <Github className="h-4 w-4 mr-2 cursor-pointer" />
                                     Repository
                                 </a>
                             </DropdownMenuItem>

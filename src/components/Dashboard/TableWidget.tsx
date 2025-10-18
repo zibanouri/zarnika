@@ -57,9 +57,9 @@ const getStatusColor = (status: string) => {
         case 'Pending':
             return 'bg-amber-200 hover:bg-amber-300 text-amber-900';
         case 'Failed':
-            return 'bg-emerald-200 hover:bg-emerald-300 text-emerald-900';
-        default:
             return 'bg-red-200 hover:bg-red-300 text-red-900';
+        default:
+            return 'bg-emerald-200 hover:bg-emerald-300 text-emerald-900';
     }
 };
 const TableWidget = () => {

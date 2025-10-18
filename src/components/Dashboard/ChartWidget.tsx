@@ -10,7 +10,9 @@ import {
     Tooltip,
     Legend,
     ResponsiveContainer,
+
 } from 'recharts';
+import {ChartColumnBig } from 'lucide-react';
 
 const data = [
     {
@@ -95,39 +97,38 @@ const colorChange = (status: string) => {
             return '#3B38A0';
         case 'views':
             return '#465C88';
+        default:
+            return '#ccc';
     }
 };
+
 const ChartWidget = () => {
-    const [activeMetric, setActiveMetric] = useState<
-        'revenue' | 'users' | 'views'
-    >('revenue');
+    const [activeMetric, setActiveMetric] = useState<'revenue' | 'users' | 'views'>('revenue');
+
     return (
         <Card>
             <CardHeader className="flex flex-row items-center justify-between">
-                <CardTitle>Performance Overview</CardTitle>
+                <CardTitle className="flex items-center gap-2">
+                    <ChartColumnBig className="h-5 w-5" />
+                    Performance Overview
+                </CardTitle>
                 <div className="flex gap-2">
                     <Button
-                        variant={
-                            activeMetric === 'revenue' ? 'default' : 'outline'
-                        }
+                        variant={activeMetric === 'revenue' ? 'default' : 'outline'}
                         size="sm"
                         onClick={() => setActiveMetric('revenue')}
                     >
                         Revenue
                     </Button>
                     <Button
-                        variant={
-                            activeMetric === 'users' ? 'default' : 'outline'
-                        }
+                        variant={activeMetric === 'users' ? 'default' : 'outline'}
                         size="sm"
                         onClick={() => setActiveMetric('users')}
                     >
                         Users
                     </Button>
                     <Button
-                        variant={
-                            activeMetric === 'views' ? 'default' : 'outline'
-                        }
+                        variant={activeMetric === 'views' ? 'default' : 'outline'}
                         size="sm"
                         onClick={() => setActiveMetric('views')}
                     >
@@ -139,8 +140,6 @@ const ChartWidget = () => {
                 <div className="h-80">
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart
-                            width={500}
-                            height={300}
                             data={data}
                             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                         >
@@ -152,6 +151,7 @@ const ChartWidget = () => {
                             <Bar
                                 dataKey={activeMetric}
                                 fill={colorChange(activeMetric)}
+                                barSize={30}
                             />
                         </BarChart>
                     </ResponsiveContainer>
@@ -160,4 +160,5 @@ const ChartWidget = () => {
         </Card>
     );
 };
+
 export default ChartWidget;
