@@ -56,7 +56,7 @@ const DashboardHeader = () => {
     }, [darkMode]);
 
     return (
-        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-amber-50 border-b border-amber-100 hover:border-amber-200 duration-300">
+        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-background hover:border-amber-200 duration-300">
             <div className="flex items-center justify-between h-full px-4">
                 {/* Left Section */}
                 <div className="flex items-center gap-4">
