@@ -28,8 +28,8 @@ const Dashboard = () => {
     return (
         <div className="min-h-screen">
             <DashboardHeader
-                // onToggleSidebar={handleToggleSidebar}
-                // sidebarCollapsed={sidebarCollapsed}
+                onToggleSidebar={handleToggleSidebar}
+                sidebarCollapsed={sidebarCollapsed}
             />
 
             <div className="flex">

@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="bg-background border-t px-6 py-4">
+        <footer className="bg-background border-t px-6 py-4 ml-64">
             <div className="text-center text-sm">
                 Zarnika© 2025 Ziba Nouri. All Rights Reserved. Made with love
                 by ✨
