@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import Footer from './Footer';
 import DashboardHeader from './DashboardHeader';
 import DashboardSidebar from './DashboardSidebar';
@@ -19,16 +19,24 @@ const Dashboard = () => {
     //             break
     //     }
     // }
+    const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(true);
+
+    const handleToggleSidebar = () => {
+        setSidebarCollapsed(!sidebarCollapsed);
+    };
 
     return (
         <div className="min-h-screen">
-            <DashboardHeader />
+            <DashboardHeader
+                // onToggleSidebar={handleToggleSidebar}
+                // sidebarCollapsed={sidebarCollapsed}
+            />
 
             <div className="flex">
                 <DashboardSidebar />
 
                 <main className="flex-1 transition-all duration-300 ml-64 pt-16 min-h-screen flex flex-col overflow-x-hidden">
-                    <div className="flex-1">
+                    <div className="flex-1 mb-13">
                         <DashboardContent currentPage={currentPage} />
                     </div>
                     <Footer />
