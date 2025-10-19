@@ -68,6 +68,13 @@ const DashboardHeader = () => {
                     >
                         <Menu className="h-5 w-5" />
                     </Button>
+                    <button>
+                        button
+                    </button>
+                    <div className='flex items-center gap-2'>
+                        <div></div>
+                        <span>zarnika</span>
+                    </div>
                 </div>
                 <div className="hidden md:flex flex-1 max-w-md">
                     <form className="relative w-full">

@@ -21,7 +21,7 @@ const Stats = [
     },
     {
         title: 'Action Users',
-        value: '2.845',
+        value: '2,845',
         change: '+10.43',
         trend: 'up',
         icon: Users,
