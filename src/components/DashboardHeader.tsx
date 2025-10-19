@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
 import {
     Menu,
     Moon,
@@ -12,6 +13,7 @@ import {
     Github,
     Search,
     Sun,
+    ChevronDown,
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
@@ -68,14 +70,36 @@ const DashboardHeader = () => {
                     >
                         <Menu className="h-5 w-5" />
                     </Button>
-                    <button>
-                        t
-                    </button>
-                    <div className='flex items-center gap-2'>
-                        <div className='w-8 h-8 bg-amber-300 rounded-lg flex items-center justify-center'>
-                           <span className='text-primary-foreground font-bold text-sm'>C</span> 
+                    <button
+                        className={cn(
+                            'hidden md:flex h-8 w-8 rounded-lg border-2 transition-all duration-300 items-center justify-center',
+                            'hover:bg-primary/10 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/20',
+                            'group active:scale-95 relative'
+                        )}
+                    >
+                        <div
+                            className={cn(
+                                'flex items-center justify-center transition-all duration-300',
+                                'group-hover:rotate-13 group-active:rotate-45'
+                            )}
+                        >
+                            <ChevronDown
+                                className={cn(
+                                    'h-4 w-4 -rotate-90 transition-all duration-300',
+                                    'text-muted-foreground group-hover:text-primary group-hover:scale-110'
+                                )}
+                            ></ChevronDown>
                         </div>
-                        <span className='font-bold text-lg hidden sm:block'>zarnika</span>
+                    </button>
+                    <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-amber-300 rounded-lg flex items-center justify-center">
+                            <span className="text-primary-foreground font-bold text-sm">
+                                C
+                            </span>
+                        </div>
+                        <span className="font-bold text-lg hidden sm:block">
+                            zarnika
+                        </span>
                     </div>
                 </div>
                 <div className="hidden md:flex flex-1 max-w-md">
@@ -156,7 +180,11 @@ const DashboardHeader = () => {
                     </Button>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" size="sm" className="relative">
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                className="relative"
+                            >
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage
                                         src="/zarnika/avatar/image6.webp"
