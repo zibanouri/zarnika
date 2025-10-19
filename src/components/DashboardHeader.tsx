@@ -69,11 +69,13 @@ const DashboardHeader = () => {
                         <Menu className="h-5 w-5" />
                     </Button>
                     <button>
-                        button
+                        t
                     </button>
                     <div className='flex items-center gap-2'>
-                        <div></div>
-                        <span>zarnika</span>
+                        <div className='w-8 h-8 bg-amber-300 rounded-lg flex items-center justify-center'>
+                           <span className='text-primary-foreground font-bold text-sm'>C</span> 
+                        </div>
+                        <span className='font-bold text-lg hidden sm:block'>zarnika</span>
                     </div>
                 </div>
                 <div className="hidden md:flex flex-1 max-w-md">
