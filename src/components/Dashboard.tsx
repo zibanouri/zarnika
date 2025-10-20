@@ -36,7 +36,7 @@ const Dashboard = () => {
             <div className="flex">
                 <DashboardSidebar sidebarCollapsed={sidebarCollapsed} />
 
-                   <main
+                <main
                     className={cn(
                         'flex-1 transition-all duration-300 pt-16 pb-6 md:pb-0 ml-0 overflow-y-auto',
                         sidebarCollapsed ? 'md:ml-16' : 'md:ml-64'

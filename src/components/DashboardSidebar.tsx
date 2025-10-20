@@ -109,13 +109,13 @@ const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
                             <CollapsibleTrigger asChild>
                                 <Button
                                     variant="ghost"
-                                    className=  "w-full justify-start gap-3 h-10">
-                                
+                                    className="w-full justify-start gap-3 h-10"
+                                >
                                     <BarChart3 className="h-5 w-5 flex-shrink-0" />
                                     <span className="truncate flex-1 text-left">
                                         Analitics
                                     </span>
-                                     {!sidebarCollapsed && (
+                                    {!sidebarCollapsed && (
                                         <ChevronDown className="h-4 w-4" />
                                     )}
                                 </Button>
@@ -142,7 +142,7 @@ const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
                 {/* help */}
                 <div className="border-t p-3">
                     <div className="space-y-1">
-                         <Button
+                        <Button
                             variant="ghost"
                             className="w-full justify-start gap-3 h-9 cursor-pointer"
                         >
@@ -151,7 +151,7 @@ const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
                                 <span className="text-sm">Help Center</span>
                             )}
                         </Button>
-                         <Button
+                        <Button
                             variant="ghost"
                             className="w-full justify-start gap-3 h-9 cursor-pointer"
                         >
