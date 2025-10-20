@@ -109,13 +109,15 @@ const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
                             <CollapsibleTrigger asChild>
                                 <Button
                                     variant="ghost"
-                                    className="w-full justify-start gap-3 h-10"
-                                >
+                                    className=  "w-full justify-start gap-3 h-10">
+                                
                                     <BarChart3 className="h-5 w-5 flex-shrink-0" />
                                     <span className="truncate flex-1 text-left">
                                         Analitics
                                     </span>
-                                    <ChevronDown className="h-4 w-4" />
+                                     {!sidebarCollapsed && (
+                                        <ChevronDown className="h-4 w-4" />
+                                    )}
                                 </Button>
                             </CollapsibleTrigger>
                             <CollapsibleContent className="overflow-hidden">
@@ -140,19 +142,23 @@ const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
                 {/* help */}
                 <div className="border-t p-3">
                     <div className="space-y-1">
-                        <Button
+                         <Button
                             variant="ghost"
-                            className="w-full justify-start gap-3 h-9"
+                            className="w-full justify-start gap-3 h-9 cursor-pointer"
                         >
                             <HelpCircle className="h-4 w-4 flex-shrink-0" />
-                            <span className="text-sm">HelpCenter</span>
+                            {!sidebarCollapsed && (
+                                <span className="text-sm">Help Center</span>
+                            )}
                         </Button>
-                        <Button
+                         <Button
                             variant="ghost"
-                            className="w-full justify-start gap-3 h-9"
+                            className="w-full justify-start gap-3 h-9 cursor-pointer"
                         >
                             <MessagesSquare className="h-4 w-4 flex-shrink-0" />
-                            <span className="text-sm">Support</span>
+                            {!sidebarCollapsed && (
+                                <span className="text-sm">Support</span>
+                            )}
                         </Button>
                     </div>
                 </div>
