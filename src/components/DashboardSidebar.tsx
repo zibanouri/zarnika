@@ -27,7 +27,7 @@ interface DashboardSideBarProps {
     sidebarCollapsed: boolean;
 }
 
-const DashboardSidebar = ({ sidebarCollapsed, }: DashboardSideBarProps) => {
+const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
     const menuItem = [
         {
             id: 'dashboard',
@@ -83,9 +83,9 @@ const DashboardSidebar = ({ sidebarCollapsed, }: DashboardSideBarProps) => {
     return (
         <aside
             className={cn(
-                "fixed left-0 top-16 z-50 h-[calc(100vh-4rem)] bg-background border-r border-pink-100 hover:border-pink-200 duration-300 overflow-hidden w-64 transition-all",
-                "md:translate-x-0",
-                  sidebarCollapsed
+                'fixed left-0 top-16 z-50 h-[calc(100vh-4rem)] bg-background border-r border-pink-100 hover:border-pink-200 duration-300 overflow-hidden w-64 transition-all',
+                'md:translate-x-0',
+                sidebarCollapsed
                     ? '-translate-x-full md:w-16'
                     : 'translate-x-0 w-64'
             )}
