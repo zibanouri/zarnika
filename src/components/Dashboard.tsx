@@ -39,7 +39,7 @@ const Dashboard = () => {
                     <div className="flex-1 mb-13">
                         <DashboardContent currentPage={currentPage} />
                     </div>
-                    <Footer />
+                    <Footer sidebarCollapsed={sidebarCollapsed} />
                 </main>
             </div>
         </div>
