@@ -1,4 +1,5 @@
 import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
 import {
     Collapsible,
     CollapsibleContent,
@@ -22,8 +23,11 @@ import {
     HelpCircle,
     MessagesSquare,
 } from 'lucide-react';
+interface DashboardSideBarProps {
+    sidebarCollapsed: boolean;
+}
 
-const DashboardSidebar = () => {
+const DashboardSidebar = ({ sidebarCollapsed, }: DashboardSideBarProps) => {
     const menuItem = [
         {
             id: 'dashboard',
@@ -75,8 +79,17 @@ const DashboardSidebar = () => {
             href: '/analytics/realtime',
         },
     ];
+
     return (
-        <aside className="fixed left-0 top-16 z-50 h-[calc(100vh-4rem)] bg-background border-r border-pink-100 hover:border-pink-200 duration-300 overflow-hidden w-64">
+        <aside
+            className={cn(
+                "fixed left-0 top-16 z-50 h-[calc(100vh-4rem)] bg-background border-r border-pink-100 hover:border-pink-200 duration-300 overflow-hidden w-64 transition-all",
+                "md:translate-x-0",
+                  sidebarCollapsed
+                    ? '-translate-x-full md:w-16'
+                    : 'translate-x-0 w-64'
+            )}
+        >
             <div className="flex flex-col h-full">
                 <nav className="flex-1 px-3 py-4 space-y-2 overflow-y-auto">
                     {menuItem.map((item) => (
