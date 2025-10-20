@@ -104,7 +104,7 @@ const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
                     ))}
 
                     {/* Analytics */}
-                    <div className="relative">
+                    <div className="relative overflow-x-hidden">
                         <Collapsible>
                             <CollapsibleTrigger asChild>
                                 <Button
