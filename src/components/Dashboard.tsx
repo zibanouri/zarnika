@@ -6,7 +6,7 @@ import DashboardContent from './DashboardContent';
 import { cn } from '@/lib/utils';
 // import { useNavigate } from 'react-router-dom';
 
-const Dashboard = () => {
+
     // const currentPage = 'dashboard';
     // const [currentPage, setCurrentPage] = useState("dashboard");
     // const navigate = useNavigate();
@@ -20,31 +20,39 @@ const Dashboard = () => {
     //             break
     //     }
     // }
+
+const Dashboard = () => {
+    const currentPage = 'dashboard';
     const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(true);
 
-    const handleToggleSidebar = () => setSidebarCollapsed(!sidebarCollapsed);
+    const handleToggleSidebar = () => {
+        setSidebarCollapsed(!sidebarCollapsed);
+    };
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="h-screen overflow-hidden bg-background">
             <DashboardHeader
                 onToggleSidebar={handleToggleSidebar}
                 sidebarCollapsed={sidebarCollapsed}
             />
 
-            <div className="flex flex-1">
+            <div className="flex h-full pt-16">
                 <DashboardSidebar sidebarCollapsed={sidebarCollapsed} />
-
                 <main
                     className={cn(
-                        'flex-1 transition-all duration-300 pt-16 pb-6 overflow-y-auto',
-                        sidebarCollapsed ? 'md:ml-16' : 'md:ml-64'
+                        'flex flex-col flex-1 overflow-y-auto transition-transform duration-300 ease-in-out',
+                        sidebarCollapsed
+                            ? 'md:translate-x-[4rem]'
+                            : 'md:translate-x-[16rem]'
                     )}
                 >
-                    <DashboardContent currentPage="dashboard" />
+                    <div className="flex-1 px-4 md:px-6 pb-8">
+                        <DashboardContent currentPage={currentPage} />
+                    </div>
+
+                   <Footer sidebarCollapsed={sidebarCollapsed} />
                 </main>
             </div>
-
-            <Footer sidebarCollapsed={sidebarCollapsed} />
         </div>
     );
 };
