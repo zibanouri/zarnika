@@ -8,8 +8,8 @@ const Footer = ({ sidebarCollapsed }: FooterProps) => {
     return (
         <footer
             className={cn(
-                'bg-background border-t px-6 py-4',
-                sidebarCollapsed ? 'ml-16 md:ml-16' : 'ml-64 md:ml-64'
+                'bg-background border-t px-6 py-4 w-full transition-all duration-300',
+                sidebarCollapsed ? 'md:pl-16' : 'md:pl-64'
             )}
         >
             <div className="text-center text-sm">
