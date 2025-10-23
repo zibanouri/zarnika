@@ -6,20 +6,19 @@ import DashboardContent from './DashboardContent';
 import { cn } from '@/lib/utils';
 // import { useNavigate } from 'react-router-dom';
 
+// const currentPage = 'dashboard';
+// const [currentPage, setCurrentPage] = useState("dashboard");
+// const navigate = useNavigate();
 
-    // const currentPage = 'dashboard';
-    // const [currentPage, setCurrentPage] = useState("dashboard");
-    // const navigate = useNavigate();
-
-    // const handlePageChange = (page: string) => {
-    //     setCurrentPage(page);
-    //     switch (page) {
-    //         case "dashboard":
-    //         default:
-    //             navigate("/");
-    //             break
-    //     }
-    // }
+// const handlePageChange = (page: string) => {
+//     setCurrentPage(page);
+//     switch (page) {
+//         case "dashboard":
+//         default:
+//             navigate("/");
+//             break
+//     }
+// }
 
 const Dashboard = () => {
     const currentPage = 'dashboard';
@@ -42,7 +41,7 @@ const Dashboard = () => {
                     className={cn(
                         'flex flex-col flex-1 overflow-y-auto transition-all duration-300',
                         sidebarCollapsed ? 'md:pl-16' : 'md:pl-64',
-                        'pl-0' // موبایل: بدون padding چپ
+                        'pl-0'
                     )}
                 >
                     <div className="flex-1 px-4 md:px-6 pb-8">
