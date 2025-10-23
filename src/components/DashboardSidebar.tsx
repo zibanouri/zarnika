@@ -91,7 +91,7 @@ const DashboardSidebar = ({ sidebarCollapsed }: DashboardSideBarProps) => {
             )}
         >
             <div className="flex flex-col h-full">
-                <nav className="flex-1 px-3 py-4 space-y-2 overflow-y-auto hide-scrollbar">
+                <nav className="flex-1 px-3 py-4 space-y-2 overflow-y-auto">
                     {menuItem.map((item) => (
                         <Button
                             key={item.id}

@@ -119,8 +119,8 @@
     @apply bg-background text-foreground;
   }
 }
-/* ::-webkit-scrollbar {
-  width: 8px;
+::-webkit-scrollbar {
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -136,13 +136,6 @@
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(135deg, var(--gradient-from), var(--gradient-to));
-} */
+  background: linear-gradient(135deg, #FFB347, #FF8C00);
+}
 
-.hide-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;    
-}
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;       
-}

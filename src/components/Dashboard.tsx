@@ -23,7 +23,7 @@ import { cn } from '@/lib/utils';
 
 const Dashboard = () => {
     const currentPage = 'dashboard';
-    const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(true);
+    const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(false);
 
     const handleToggleSidebar = () => {
         setSidebarCollapsed(!sidebarCollapsed);
@@ -40,17 +40,15 @@ const Dashboard = () => {
                 <DashboardSidebar sidebarCollapsed={sidebarCollapsed} />
                 <main
                     className={cn(
-                        'flex flex-col flex-1 overflow-y-auto transition-transform duration-300 ease-in-out',
-                        sidebarCollapsed
-                            ? 'md:translate-x-[4rem]'
-                            : 'md:translate-x-[16rem]'
+                        'flex flex-col flex-1 overflow-y-auto transition-all duration-300',
+                        sidebarCollapsed ? 'md:pl-16' : 'md:pl-64',
+                        'pl-0' // موبایل: بدون padding چپ
                     )}
                 >
                     <div className="flex-1 px-4 md:px-6 pb-8">
                         <DashboardContent currentPage={currentPage} />
                     </div>
-
-                   <Footer sidebarCollapsed={sidebarCollapsed} />
+                    <Footer sidebarCollapsed={sidebarCollapsed} />
                 </main>
             </div>
         </div>
