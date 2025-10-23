@@ -71,11 +71,11 @@ const ActivityFeed = () => {
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="space-y-4">
+                <div className="space-y-3">
                     {activities.map((activity, index) => (
                         <div
                             key={index}
-                            className="flex items-start gap-2 border rounded-lg hover:bg-accent/50 cursor-pointer justify-between"
+                            className="flex items-start gap-2 border rounded-lg hover:bg-accent/50 cursor-pointer justify-between p-3"
                         >
                             <Avatar className="h-8 w-8 flex-shrink-0">
                                 <AvatarImage src={activity.user.avatar} />
