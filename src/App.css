@@ -138,26 +138,25 @@
 .bg-gradient-primary {
   background: linear-gradient(135deg, #FFB347, #FF8C00);
 }
-/* === Header bottom border on hover === */
-/* Override global border for header */
+
 header.no-global-border {
   border: none !important;
   border-bottom: 1px solid transparent !important;
   transition: border-color 0.3s ease !important;
 }
 header.no-global-border:hover {
-  border-bottom-color: #a3a1a1 !important; /* amber-500 */
+  border-bottom-color: #a3a1a1 !important; 
 }
 .header-with-fixed-border {
-  border-bottom: 1px solid #e3dfd8; /* amber-500 */
+  border-bottom: 1px solid #e3dfd8; 
   transition: border-color 0.3s ease;
 }
 .header-with-fixed-border:hover {
-  border-bottom-color: #f59e0b; /* amber-600 — تیره‌تر */
+  border-bottom-color: #f59e0b; 
 }
 .dark .header-with-fixed-border {
   border-bottom-color: #f59e0b;
 }
 .dark .header-with-fixed-border:hover {
-  border-bottom-color: #d97706; /* amber-700 */
+  border-bottom-color: #b57021;
 }
