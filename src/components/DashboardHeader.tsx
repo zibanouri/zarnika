@@ -49,10 +49,12 @@ const mockNotifications = [
 interface DashboardHeaderProps {
     onToggleSidebar: () => void;
     sidebarCollapsed: boolean;
+    onPageChange: (page: string) => void;
 }
 const DashboardHeader = ({
     onToggleSidebar,
     sidebarCollapsed,
+    onPageChange,
 }: DashboardHeaderProps) => {
     const [darkMode, setDarkMode] = useState(false);
 
@@ -65,7 +67,7 @@ const DashboardHeader = ({
     }, [darkMode]);
 
     return (
-    <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-background header-with-fixed-border">
+        <header className="fixed top-0 left-0 right-0 h-16 z-50 bg-background header-with-fixed-border">
             <div className="flex items-center justify-between h-full px-4">
                 {/* Left Section */}
                 <div className="flex items-center gap-4">
@@ -112,11 +114,14 @@ const DashboardHeader = ({
                         </div>
                     </button>
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-amber-300 rounded-lg flex items-center justify-center">
-                            <span className="text-primary-foreground font-bold text-sm">
+                        <button
+                            onClick={() => onPageChange('dashboard')}
+                            className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center cursor-pointer"
+                        >
+                            <span className="text-primary-foreground font-bold text-md">
                                 C
                             </span>
-                        </div>
+                        </button>
                         <span className="font-bold text-lg hidden sm:block">
                             zarnika
                         </span>
@@ -166,7 +171,10 @@ const DashboardHeader = ({
                                 {mockNotifications.map((notification) => (
                                     <div
                                         key={notification.id}
-                                        className="p-3 border-b hover:bg-muted/50"
+                                        className="p-3 border-b hover:bg-muted/50 cursor-pointer"
+                                        onClick={() =>
+                                            onPageChange('notifications')
+                                        }
                                     >
                                         <div className="flex items-start gap-3">
                                             <div
@@ -188,7 +196,10 @@ const DashboardHeader = ({
                                 <Button
                                     variant="ghost"
                                     size="sm"
-                                    className="w-full"
+                                    className="w-full cursor-pointer"
+                                    onClick={() =>
+                                        onPageChange('notifications')
+                                    }
                                 >
                                     View All Notifications
                                 </Button>

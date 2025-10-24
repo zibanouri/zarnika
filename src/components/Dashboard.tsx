@@ -6,23 +6,11 @@ import DashboardContent from './DashboardContent';
 import { cn } from '@/lib/utils';
 
 const Dashboard = () => {
-    const currentPage = 'Dashboard';
-// import { useNavigate } from 'react-router-dom';
+    const [currentPage, setCurrentPage] = useState<string>('dashboard');
 
-// const currentPage = 'dashboard';
-// const [currentPage, setCurrentPage] = useState("dashboard");
-// const navigate = useNavigate();
-
-// const handlePageChange = (page: string) => {
-//     setCurrentPage(page);
-//     switch (page) {
-//         case "dashboard":
-//         default:
-//             navigate("/");
-//             break
-//     }
-// }
-
+    const handlePageChange = (page: string) => {
+        setCurrentPage(page);
+    };
 
     const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(false);
 
@@ -31,22 +19,25 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="h-screen overflow-hidden bg-background">
+        <div className="min-h-screen">
             <DashboardHeader
                 onToggleSidebar={handleToggleSidebar}
                 sidebarCollapsed={sidebarCollapsed}
+                onPageChange={handlePageChange}
             />
-
-            <div className="flex h-full pt-16">
-                <DashboardSidebar sidebarCollapsed={sidebarCollapsed} />
+            <div className="flex">
+                <DashboardSidebar
+                    onPageChange={handlePageChange}
+                    sidebarCollapsed={sidebarCollapsed}
+                    currentPage={currentPage}
+                />
                 <main
                     className={cn(
-                        'flex flex-col flex-1 overflow-y-auto transition-all duration-300',
-                        sidebarCollapsed ? 'md:pl-16' : 'md:pl-64',
-                        'pl-0'
+                        'flex-1 transition-all duration-300 pt-16 pb-6 md:pb-0 ml-0 overflow-y-auto',
+                        sidebarCollapsed ? 'md:ml-16' : 'md:ml-64'
                     )}
                 >
-                    <div className="flex-1 px-4 md:px-6 pb-8">
+                    <div className="flex-1 mb-13">
                         <DashboardContent currentPage={currentPage} />
                     </div>
                     <Footer sidebarCollapsed={sidebarCollapsed} />

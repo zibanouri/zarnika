@@ -13,7 +13,8 @@ const Footer = ({ sidebarCollapsed }: FooterProps) => {
             )}
         >
             <div className="text-center text-sm">
-                zarnika | Admin Panel © 2025 All rights reserved. Made with ❤️ by
+                zarnika | Admin Panel © 2025 All rights reserved. Made with ❤️
+                by
                 <a
                     className="pl-1.5 text-primary hover:text-primary/70 duration-300"
                     href="https://github.com/farzadasgari/"
