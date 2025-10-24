@@ -4,6 +4,9 @@ import DashboardHeader from './DashboardHeader';
 import DashboardSidebar from './DashboardSidebar';
 import DashboardContent from './DashboardContent';
 import { cn } from '@/lib/utils';
+
+const Dashboard = () => {
+    const currentPage = 'Dashboard';
 // import { useNavigate } from 'react-router-dom';
 
 // const currentPage = 'dashboard';
@@ -20,8 +23,7 @@ import { cn } from '@/lib/utils';
 //     }
 // }
 
-const Dashboard = () => {
-    const currentPage = 'dashboard';
+
     const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(false);
 
     const handleToggleSidebar = () => {
