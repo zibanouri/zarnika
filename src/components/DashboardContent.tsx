@@ -4,6 +4,7 @@ import ChartWidget from '@/components/Dashboard/ChartWidget';
 import TableWidget from '@/components/Dashboard/TableWidget';
 import QuickActions from '@/components/Dashboard/QuickActions';
 import ActivityFeed from '@/components/Dashboard/ActivityFeed';
+import Settings from '@/components/Settings';
 
 interface DashboardContentProps {
     currentPage: string;
@@ -15,7 +16,7 @@ const DashboardContent = ({ currentPage }: DashboardContentProps) => {
              case 'users':
                 return <div className="space-y-6">Users Page</div>;
             case 'settings':
-                return <div className="space-y-6">Settings Page</div>;
+                return <Settings />
                  case 'orders':
                 return <div className="space-y-6">Orders Page</div>;
                  case 'payments':
