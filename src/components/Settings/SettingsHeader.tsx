@@ -6,12 +6,20 @@ const SettingsHeader = () => {
                 <h1 className="text-2xl font-bold">Settings</h1>
                 <div className="text-sm text-muted-foreground">
                     <span>Last Modified: 2 hours ago by Ziba</span>
-                    <Badge variant="destructive" className="animate-pulse">
+                    <Badge variant="destructive" className="animate-caret-blink">
                         8 Unsaved Changes
                     </Badge>
                 </div>
             </div>
-        </div>
+              <div className="flex items-center gap-2">
+                    <Badge
+                        variant="outline"
+                        className="bg-emerald-50 text-emerald-700 border-emerald-200"
+                    >
+                        Production
+                    </Badge>
+                </div>
+            </div>
     );
 };
 
