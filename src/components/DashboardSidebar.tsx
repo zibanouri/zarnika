@@ -39,66 +39,49 @@ export const DashboardSidebar = ({
         {
             id: 'dashboard',
             label: 'Dashboard',
-            icon: LayoutDashboard
+            icon: LayoutDashboard,
         },
-        {
-            id: 'users',
-            label: 'Users',
-            icon: Users
-        },
-        {
-            id: 'orders',
-            label: 'Orders',
-            icon: ShoppingCart
-        },
+        { id: 'users', label: 'Users', icon: Users },
+        { id: 'orders', label: 'Orders', icon: ShoppingCart },
         {
             id: 'payments',
             label: 'Payments',
-            icon: CreditCard
+            icon: CreditCard,
         },
         {
             id: 'notifications',
             label: 'Notifications',
-            icon: Bell
+            icon: Bell,
         },
         {
             id: 'database',
             label: 'Database',
-            icon: Database
+            icon: Database,
         },
-        {
-            id: 'security',
-            label: 'Security',
-            icon: Shield
-        },
-        {
-            id: 'tickets',
-            label: 'Tickets',
-            icon: TicketIcon
-        },
-        {
-            id: 'profile',
-            label: 'Profile',
-            icon: User
-        },
+        { id: 'security', label: 'Security', icon: Shield },
+        { id: 'tickets', label: 'Tickets', icon: TicketIcon },
+        { id: 'profile', label: 'Profile', icon: User },
         {
             id: 'settings',
-
             label: 'Settings',
-            icon: Settings
+            icon: Settings,
         },
     ];
 
     const analyticsItems = [
-        { id: 'analytics-overview', label: 'Overview', icon: BarChart2 },
-        { id: 'analytics-realtime', label: 'Real-Time', icon: Activity },
+        {
+            id: 'analytics-overview',
+            label: 'Overview',
+            icon: BarChart2,
+            href: '/analytics/overview',
+        },
+        {
+            id: 'analytics-realtime',
+            label: 'Real-Time',
+            icon: Activity,
+            href: '/analytics/realtime',
+        },
     ];
-
-    const supportItems = [
-        { id: 'help', label: 'Help Center', icon: HelpCircle },
-        { id: 'support', label: 'Support', icon: MessageSquare },
-    ];
-
     return (
         <aside
             className={cn(
@@ -110,104 +93,81 @@ export const DashboardSidebar = ({
             )}
         >
             <div className="flex flex-col h-full">
+                {/* Navigation */}
                 <nav className="flex-1 px-3 py-4 space-y-2 overflow-y-auto">
-                    {menuItems.map((item) => {
-                        const Icon = item.icon;
-                        return (
-                            <Button
-                                key={item.id}
-                                variant={
-                                    currentPage === item.id
-                                        ? 'secondary'
-                                        : 'ghost'
-                                }
-                                className="w-full justify-start gap-3 h-10 cursor-pointer"
-                                onClick={() => onPageChange(item.id)}
-                            >
-                                <Icon className="h-5 w-5 flex-shrink-0" />
-                                {!sidebarCollapsed && (
-                                    <span className="truncate">
-                                        {item.label}
-                                    </span>
-                                )}
-                            </Button>
-                        );
-                    })}
+                    {menuItems.map((item) => (
+                        <Button
+                            key={item.id}
+                            variant={
+                                currentPage == item.id ? 'default' : 'ghost'
+                            }
+                            className="w-full justify-start gap-3 h-10 cursor-pointer"
+                            onClick={() => onPageChange(item.id)}
+                        >
+                            <item.icon className="h-5 w-5 flex-shrink-0" />
+                            <span className="truncate">{item.label}</span>
+                        </Button>
+                    ))}
 
                     {/* Analytics */}
-                    <Collapsible defaultOpen>
-                        <CollapsibleTrigger asChild>
-                            <Button
-                                variant="ghost"
-                                className="w-full justify-start gap-3 h-10 cursor-pointer"
-                            >
-                                <BarChart3 className="h-5 w-5 flex-shrink-0" />
-                                {!sidebarCollapsed && (
-                                    <>
-                                        <span className="truncate flex-1 text-left">
-                                            Analytics
-                                        </span>
-                                        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                                    </>
-                                )}
-                            </Button>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="overflow-hidden">
-                            <div className="space-y-1 mt-1">
-                                {analyticsItems.map((item) => {
-                                    const Icon = item.icon;
-                                    return (
+                    <div className="relative overflow-hidden">
+                        <Collapsible>
+                            <CollapsibleTrigger asChild>
+                                <Button
+                                    variant="ghost"
+                                    className="w-full justify-start gap-3 h-10 cursor-pointer"
+                                >
+                                    <BarChart3 className="h-5 w-5 flex-shrink-0" />
+                                    <span className="truncate flex-1 text-left">
+                                        Analytics
+                                    </span>
+                                    {!sidebarCollapsed && (
+                                        <ChevronDown className="h-4 w-4" />
+                                    )}
+                                </Button>
+                            </CollapsibleTrigger>
+                            <CollapsibleContent className="overflow-hidden">
+                                <div className="space-y-1 mt-1">
+                                    {analyticsItems.map((item) => (
                                         <Button
                                             key={item.id}
-                                            variant={
-                                                currentPage === item.id
-                                                    ? 'secondary'
-                                                    : 'ghost'
-                                            }
+                                            variant="ghost"
                                             className="w-full justify-start gap-3 h-9 ml-6 cursor-pointer"
-                                            onClick={() =>
-                                                onPageChange(item.id)
-                                            }
                                         >
-                                            <Icon className="h-4 w-4 flex-shrink-0" />
-                                            {!sidebarCollapsed && (
-                                                <span className="truncate text-sm">
-                                                    {item.label}
-                                                </span>
-                                            )}
+                                            <item.icon className="h-4 w-4 flex-shrink-0" />
+                                            <span className="truncate text-sm">
+                                                {item.label}
+                                            </span>
                                         </Button>
-                                    );
-                                })}
-                            </div>
-                        </CollapsibleContent>
-                    </Collapsible>
+                                    ))}
+                                </div>
+                            </CollapsibleContent>
+                        </Collapsible>
+                    </div>
                 </nav>
 
                 {/* Help & Support */}
                 <div className="border-t p-3">
                     <div className="space-y-1">
-                        {supportItems.map((item) => {
-                            const Icon = item.icon;
-                            return (
-                                <Button
-                                    key={item.id}
-                                    variant={
-                                        currentPage === item.id
-                                            ? 'secondary'
-                                            : 'ghost'
-                                    }
-                                    className="w-full justify-start gap-3 h-9 cursor-pointer"
-                                    onClick={() => onPageChange(item.id)}
-                                >
-                                    <Icon className="h-4 w-4 flex-shrink-0" />
-                                    {!sidebarCollapsed && (
-                                        <span className="text-sm">
-                                            {item.label}
-                                        </span>
-                                    )}
-                                </Button>
-                            );
-                        })}
+                        <Button
+                            variant="ghost"
+                            className="w-full justify-start gap-3 h-9 cursor-pointer"
+                        >
+                            <HelpCircle className="h-4 w-4 flex-shrink-0" />
+                            {!sidebarCollapsed && (
+                                <span className="text-sm">Help Center</span>
+                            )}
+                        </Button>
+
+                        <Button
+                            variant="ghost"
+                            className="w-full justify-start gap-3 h-9 cursor-pointer"
+                        >
+                            <MessageSquare className="h-4 w-4 flex-shrink-0" />
+                            {!sidebarCollapsed && (
+                                <span className="text-sm">Support</span>
+                            )}
+                        </Button>
                     </div>
                 </div>
             </div>
