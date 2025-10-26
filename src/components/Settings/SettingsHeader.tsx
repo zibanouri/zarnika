@@ -20,8 +20,8 @@ import {
                 <div>
                     <h1 className="text-2xl font-bold">Settings</h1>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mt-1">
-                        <span>Last Modified: 2 hours ago by John Doe</span>
-                        <Badge variant="destructive" className="animate-pulse">
+                        <span>Last Modified: 2 hours ago by Ziba</span>
+                        <Badge variant="destructive" className="animate-caret-blink">
                             3 Unsaved Changes
                         </Badge>
                     </div>
