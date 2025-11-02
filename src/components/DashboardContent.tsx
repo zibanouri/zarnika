@@ -13,21 +13,21 @@ interface DashboardContentProps {
 const DashboardContent = ({ currentPage }: DashboardContentProps) => {
     const renderContent = () => {
         switch (currentPage) {
-             case 'users':
+            case 'users':
                 return <div className="space-y-6">Users Page</div>;
             case 'settings':
-                return <Settings />
-                 case 'orders':
+                return <Settings />;
+            case 'orders':
                 return <div className="space-y-6">Orders Page</div>;
-                 case 'payments':
+            case 'payments':
                 return <div className="space-y-6">Payments Page</div>;
-                 case 'database':
+            case 'database':
                 return <div className="space-y-6">Database Page</div>;
-                 case 'security':
+            case 'security':
                 return <div className="space-y-6">Security Page</div>;
-                 case 'tickets':
+            case 'tickets':
                 return <div className="space-y-6">Tickets Page</div>;
-                 case 'profile':
+            case 'profile':
                 return <div className="space-y-6">Profile Page</div>;
 
             case 'notifications':
