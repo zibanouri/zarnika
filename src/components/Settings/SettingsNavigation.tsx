@@ -1,25 +1,61 @@
 import { cn } from '@/lib/utils';
+import {
+  Settings,
+  Users,
+  Plug,
+  Bell,
+  Shield,
+  Palette,
+  CreditCard,
+  Gauge,
+  Cog,
+  FileText,
+} from 'lucide-react';
 
+const settingsSections = [
+  { id: 'general', label: 'General', icon: Settings },
+  { id: 'user-permissions', label: 'User & Permissions', icon: Users },
+  { id: 'integrations', label: 'Integrations', icon: Plug },
+  { id: 'notifications', label: 'Notifications', icon: Bell },
+  { id: 'security', label: 'Security', icon: Shield },
+  { id: 'appearance', label: 'Appearance', icon: Palette },
+  { id: 'billing', label: 'Billing', icon: CreditCard },
+  { id: 'performance', label: 'Performance', icon: Gauge },
+  { id: 'advanced', label: 'Advanced', icon: Cog },
+  { id: 'audit-log', label: 'Audit Log', icon: FileText },
+];
 
-const settingsNavigation = [
-    {id:"general",Label:"Grneral"},
-    {id:"user-permition",Label:"User & Permition"},
-    {id:"integrations",Label:"Integrations"},
-    {id:"notifications",Label:"Notifications"},
-    {id:"security",Label:"Security"},
-    {id:"appearance",Label:"Appearance"},
-    {id:"billings",Label:"Billings"},
-    {id:"performance",Label:"Performance"},
-    {id:"advanced",Label:"Advanced"},
-    {id:"audit-log",Label:"Audit Log"},
-]
-
-
-const SettingsNavigation = () => {
-    return(
-<nav className='space-y-1'>
-
-</nav>
-    )
+interface SettingsNavigationProps {
+  activeSection: string;
+  onSectionChange: (section: string) => void;
 }
- export default SettingsNavigation;
+
+const SettingsNavigation = ({
+  activeSection,
+  onSectionChange,
+}: SettingsNavigationProps) => {
+  return (
+    <nav className="space-y-1">
+      {settingsSections.map((section) => {
+        const IconComponent = section.icon;
+        return (
+          <button
+            key={section.id}
+            onClick={() => onSectionChange(section.id)}
+            className={cn(
+              'w-full flex items-center gap-3 px-3 py-2 text-sm text-left font-medium rounded-md',
+              activeSection === section.id
+                ? 'bg-primary text-primary-foreground'
+                : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+            )}
+          >
+            <IconComponent className="h-4 w-4" />
+            {section.label}
+          </button>
+        );
+      })}
+    </nav>
+  );
+};
+
+export default SettingsNavigation;
