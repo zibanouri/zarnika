@@ -3,6 +3,8 @@ import SettingsHeader from '@/components/Settings/SettingsHeader';
 import SettingsNavigation from '@/components/Settings/SettingsNavigation';
 import SettingsGeneral from '@/components/Settings/SettingsGeneral';
 import SettingsAdvanced from '@/components/Settings/SettingsAdvanced';
+import SettingsAppearance from '@/components/Settings/SettingsAppearance';
+
 
 const Settings = () => {
     const [activeSection, setActiveSection] = useState<string>('general');
@@ -13,6 +15,8 @@ const Settings = () => {
                 return <SettingsGeneral />;
             case 'advanced':
                 return <SettingsAdvanced />;
+                 case 'appereance':
+                return <SettingsAppearance />;
         }
     };
     return (
