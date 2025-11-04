@@ -1,5 +1,7 @@
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle,CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Pen, Trash } from 'lucide-react';
 
 const SettingsPermissions = () => {
     const roles = [
@@ -23,6 +25,7 @@ const SettingsPermissions = () => {
                 <CardHeader>
                     <CardTitle>Role Management</CardTitle>
                 </CardHeader>
+                 <CardContent>
                 <div className="space-y-4">
                     {roles.map((role) => (
                         <div
@@ -47,11 +50,36 @@ const SettingsPermissions = () => {
                                 ))}
                             </div>
                         </div>
-                    ))}
-                </div>
+                   <div className="flex gap-2">
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="cursor-pointer"
+                                    >
+                                        <Pen className="w-4 h-4" />
+                                        Edit
+                                    </Button>
+                                    <Button
+                                        variant="destructive"
+                                        size="sm"
+                                        className="cursor-pointer"
+                                    >
+                                        <Trash className="w-4 h-4" />
+                                        Delete
+                                    </Button>
+                                </div>
+                            </div>
+                        ))}
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="cursor-pointer w-full"
+                        >
+                            Add New Role
+                        </Button>
+                    </div>
+                </CardContent>
             </Card>
         </div>
     );
 };
-
-export default SettingsPermissions;
