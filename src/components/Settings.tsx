@@ -4,8 +4,15 @@ import SettingsNavigation from '@/components/Settings/SettingsNavigation';
 import SettingsGeneral from '@/components/Settings/SettingsGeneral';
 
 const Settings = () => {
-    const [activeSection, setActiveSection] = useState('general');
+    const [activeSection, setActiveSection] = useState<string>('general');
 
+    const renderActiveSection = () => {
+        switch (activeSection) {
+            case 'general':
+                return <SettingsGeneral />;
+           
+        }
+    };
     return (
         <div className="space-y-6 p-4 md:p-6 overflow-hidden max-w-full">
             <SettingsHeader />
@@ -17,17 +24,13 @@ const Settings = () => {
                     />
                 </div>
 
-                <div className="flex-1">
-                    <h2 className="text-xl font-semibold capitalize">
-                        {activeSection}
-                    </h2>
-                    <p className="text-muted-foreground mt-2">
-                        This is the {activeSection} settings section.
-                    </p>
+                <div className="flex-1 min-w-0">
+                    <div className="bg-card rounded-lg border hover:border-primary/30 duration-300 p-6 min-h-[600px]">
+                        {renderActiveSection()}
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
-
 export default Settings;
