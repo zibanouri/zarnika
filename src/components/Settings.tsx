@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SettingsHeader from '@/components/Settings/SettingsHeader';
 import SettingsNavigation from '@/components/Settings/SettingsNavigation';
+import SettingsGeneral from '@/components/Settings/SettingsGeneral';
 
 const Settings = () => {
     const [activeSection, setActiveSection] = useState('general');
