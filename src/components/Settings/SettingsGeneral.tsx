@@ -30,7 +30,7 @@ const SettingsGeneral = () => {
                             <Label htmlFor="orgname">Organization Name</Label>
                             <Input
                                 id="orgname"
-                                value="FeriX"
+                                value="ZN.Zarnika"
                                 className="mt-2"
                             />
                         </div>

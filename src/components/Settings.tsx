@@ -2,14 +2,17 @@ import { useState } from 'react';
 import SettingsHeader from '@/components/Settings/SettingsHeader';
 import SettingsNavigation from '@/components/Settings/SettingsNavigation';
 import SettingsGeneral from '@/components/Settings/SettingsGeneral';
+import SettingsAdvanced from '@/components/Settings/SettingsAdvanced';
 
-const Settings = () => {
+ const Settings = () => {
     const [activeSection, setActiveSection] = useState<string>('general');
 
     const renderActiveSection = () => {
         switch (activeSection) {
             case 'general':
                 return <SettingsGeneral />;
+                  case 'advanced':
+                return <SettingsAdvanced />;
            
         }
     };
