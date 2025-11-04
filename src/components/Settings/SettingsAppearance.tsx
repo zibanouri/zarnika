@@ -1,7 +1,6 @@
 const SettingsAppearance = () => {
     return (
-        <div>SettingsAppearance
-</div>
+        <div>SettingsAppearance</div>
     )
 }
 export default SettingsAppearance;
