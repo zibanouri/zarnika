@@ -1,4 +1,4 @@
-import {Card,CardHeader,CardTitle} from "@/components/ui/card"
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 const SettingsPermissions = () => {
     return (
         <div className="space-y-6">
@@ -12,9 +12,7 @@ const SettingsPermissions = () => {
             </div>
             <Card>
                 <CardHeader>
-                    <CardTitle>
-
-                    </CardTitle>
+                    <CardTitle></CardTitle>
                 </CardHeader>
             </Card>
         </div>
