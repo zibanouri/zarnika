@@ -14,7 +14,7 @@ import {
 
 const settingsSections = [
     { id: 'general', label: 'General', icon: Settings },
-    { id: 'user-permissions', label: 'User & Permissions', icon: Users },
+    { id: 'permissions', label: 'User & Permissions', icon: Users },
     { id: 'integrations', label: 'Integrations', icon: Plug },
     { id: 'notifications', label: 'Notifications', icon: Bell },
     { id: 'security', label: 'Security', icon: Shield },

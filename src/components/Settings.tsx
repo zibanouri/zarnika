@@ -20,15 +20,15 @@ const Settings = () => {
                 return <SettingsGeneral />;
             case 'advanced':
                 return <SettingsAdvanced />;
-            case 'appereance':
+            case 'appearance':
                 return <SettingsAppearance />;
-            case 'audit':
+            case 'audit-log':
                 return <SettingsAudit />;
             case 'billing':
                 return <SettingsBilling />;
             case 'integrations':
                 return <SettingsIntegrations />;
-            case 'notification':
+            case 'notifications':
                 return <SettingsNotifications />;
             case 'performance':
                 return <SettingsPerformance />;
