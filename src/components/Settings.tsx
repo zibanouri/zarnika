@@ -9,6 +9,7 @@ import SettingsBilling from '@/components/Settings/SettingsBilling';
 import SettingsIntegrations from '@/components/Settings/SettingsIntegrations';
 import SettingsNotifications from '@/components/Settings/SettingsNotifications';
 import SettingsPerformance from '@/components/Settings/SettingsPerformance';
+import SettingsPermissions from '@/components/Settings/SettingsPermissions';
 const Settings = () => {
     const [activeSection, setActiveSection] = useState<string>('general');
 
@@ -30,6 +31,8 @@ const Settings = () => {
                 return <SettingsNotifications />;
             case 'performance':
                 return <SettingsPerformance />;
+            case 'permissions':
+                return <SettingsPermissions />;
         }
     };
     return (
