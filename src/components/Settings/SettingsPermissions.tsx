@@ -14,7 +14,9 @@ export const SettingsPermissions = () => {
     return (
         <div className="space-y-6">
             <div>
-                <h2 className="text-lg font-semibold mb-2">Users & Permissions</h2>
+                <h2 className="text-lg font-semibold mb-2">
+                    Users & Permissions
+                </h2>
                 <p className="text-muted-foreground">
                     Manage user roles, permissions, and access policies.
                 </p>
@@ -49,18 +51,30 @@ export const SettingsPermissions = () => {
                                     </div>
                                 </div>
                                 <div className="flex gap-2 flex-shrink-0">
-                                    <Button variant="outline" size="sm">
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="cursor-pointer"
+                                    >
                                         <Pen className="w-4 h-4 mr-1" />
                                         Edit
                                     </Button>
-                                    <Button variant="destructive" size="sm">
+                                    <Button
+                                        variant="destructive"
+                                        size="sm"
+                                        className="cursor-pointer"
+                                    >
                                         <Trash className="w-4 h-4 mr-1" />
                                         Delete
                                     </Button>
                                 </div>
                             </div>
                         ))}
-                        <Button variant="outline" size="sm" className="w-full mt-2">
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="w-full mt-2"
+                        >
                             Add New Role
                         </Button>
                     </div>
