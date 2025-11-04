@@ -1,8 +1,5 @@
 const SettingsPerformance = () => {
-    return(
-        <div>SettingsPerformance page</div>
-    )
-}
-
+    return <div>SettingsPerformance page</div>;
+};
 
 export default SettingsPerformance;
