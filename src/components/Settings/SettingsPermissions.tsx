@@ -1,3 +1,4 @@
+import {Card,CardHeader,CardTitle} from "@/components/ui/card"
 const SettingsPermissions = () => {
     return (
         <div className="space-y-6">
@@ -6,9 +7,16 @@ const SettingsPermissions = () => {
                     User & Permissions
                 </h2>
                 <p className="text-muted-foreground">
-                    Configure basic organization settings and preferences.
+                    Manage user roles, permissions, and access policies.
                 </p>
             </div>
+            <Card>
+                <CardHeader>
+                    <CardTitle>
+
+                    </CardTitle>
+                </CardHeader>
+            </Card>
         </div>
     );
 };
