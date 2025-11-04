@@ -5,6 +5,7 @@ import SettingsGeneral from '@/components/Settings/SettingsGeneral';
 import SettingsAdvanced from '@/components/Settings/SettingsAdvanced';
 import SettingsAppearance from '@/components/Settings/SettingsAppearance';
 import SettingsAudit from '@/components/Settings/SettingsAudit';
+import SettingsBilling from '@/components/Settings/SettingsBilling';
 
 
 const Settings = () => {
@@ -20,6 +21,8 @@ const Settings = () => {
                 return <SettingsAppearance />;
                  case 'audit':
                 return <SettingsAudit />;
+                  case 'billing':
+                return <SettingsBilling />;
         }
     };
     return (
