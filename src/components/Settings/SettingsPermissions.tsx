@@ -2,8 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash, Pen } from 'lucide-react';
-
-export const SettingsPermissions = () => {
+ const SettingsPermissions = () => {
     const roles = [
         { name: 'Administrator', users: 3, permissions: ['Full Access'] },
         { name: 'Manager', users: 8, permissions: ['Read', 'Write', 'Delete'] },
@@ -83,3 +82,5 @@ export const SettingsPermissions = () => {
         </div>
     );
 };
+
+export default SettingsPermissions;
