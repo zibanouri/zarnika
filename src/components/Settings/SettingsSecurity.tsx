@@ -1,8 +1,5 @@
 const SettingsSecurity = () => {
-    return (
-        <div>SettingsSecurity page</div>
-    )
-}
-
+    return <div>SettingsSecurity page</div>;
+};
 
 export default SettingsSecurity;
