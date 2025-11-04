@@ -17,13 +17,13 @@ const Settings = () => {
                 return <SettingsGeneral />;
             case 'advanced':
                 return <SettingsAdvanced />;
-                 case 'appereance':
+            case 'appereance':
                 return <SettingsAppearance />;
-                 case 'audit':
+            case 'audit':
                 return <SettingsAudit />;
-                  case 'billing':
+            case 'billing':
                 return <SettingsBilling />;
-                  case 'integrations':
+            case 'integrations':
                 return <SettingsIntegrations />;
         }
     };
