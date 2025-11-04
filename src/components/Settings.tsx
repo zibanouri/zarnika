@@ -7,7 +7,8 @@ import SettingsAppearance from '@/components/Settings/SettingsAppearance';
 import SettingsAudit from '@/components/Settings/SettingsAudit';
 import SettingsBilling from '@/components/Settings/SettingsBilling';
 import SettingsIntegrations from '@/components/Settings/SettingsIntegrations';
-
+import SettingsNotifications from '@/components/Settings/SettingsNotifications';
+import SettingsPerformance from '@/components/Settings/SettingsPerformance';
 const Settings = () => {
     const [activeSection, setActiveSection] = useState<string>('general');
 
@@ -25,6 +26,10 @@ const Settings = () => {
                 return <SettingsBilling />;
             case 'integrations':
                 return <SettingsIntegrations />;
+            case 'notification':
+                return <SettingsNotifications />;
+            case 'performance':
+                return <SettingsPerformance />;
         }
     };
     return (
