@@ -82,7 +82,7 @@ const SettingsPermissions = () => {
                 </CardContent>
             </Card>
 
-            {/* <Card>
+            <Card>
                 <CardHeader>
                     <CardTitle>Access Policies</CardTitle>
                 </CardHeader>
@@ -110,7 +110,7 @@ const SettingsPermissions = () => {
                         <Switch id="timeout" />
                     </div>
                 </CardContent>
-            </Card> */}
+            </Card>
         </div>
     );
 };
