@@ -2,7 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash, Pen } from 'lucide-react';
- const SettingsPermissions = () => {
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+const SettingsPermissions = () => {
     const roles = [
         { name: 'Administrator', users: 3, permissions: ['Full Access'] },
         { name: 'Manager', users: 8, permissions: ['Read', 'Write', 'Delete'] },
@@ -79,6 +81,36 @@ import { Trash, Pen } from 'lucide-react';
                     </div>
                 </CardContent>
             </Card>
+
+            {/* <Card>
+                <CardHeader>
+                    <CardTitle>Access Policies</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="2fa">
+                                Require Two-Factor Authentication
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Force all users to enable 2FA
+                            </p>
+                        </div>
+                        <Switch id="2fa" />
+                    </div>
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="timeout">
+                                Auto logout on inactivity
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Automatically logout inactive users
+                            </p>
+                        </div>
+                        <Switch id="timeout" />
+                    </div>
+                </CardContent>
+            </Card> */}
         </div>
     );
 };
