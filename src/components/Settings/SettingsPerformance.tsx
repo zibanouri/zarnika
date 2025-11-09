@@ -1,6 +1,23 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 const SettingsPerformance = () => {
-    return <div>SettingsPerformance page</div>;
+        return (
+        <div className="space-y-6">
+            <div>
+                <h2 className="text-lg font-semibold mb-2">
+                    Billing & Subscriptions
+                </h2>
+                <p className="text-muted-foreground">
+                    Manage your subscription plan and payment methods
+                </p>
+            </div>
+            <Card>
+                <CardHeader>
+                    <CardTitle>Current Plan</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4"></CardContent>
+            </Card>
+        </div>
+    );
 };
 
 export default SettingsPerformance;
