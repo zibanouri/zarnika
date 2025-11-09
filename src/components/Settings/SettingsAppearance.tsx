@@ -29,7 +29,7 @@ const SettingsAppearance = () => {
                                     className="w-16 h-10"
                                 />
                                 <Input
-                                    placeholder="#6a2bde"
+                                    placeholder="#2e7d32"
                                     type="text"
                                     className="flex-1"
                                 />
@@ -46,7 +46,7 @@ const SettingsAppearance = () => {
                                     className="w-16 h-10"
                                 />
                                 <Input
-                                    placeholder="#6a2bde"
+                                    placeholder="#81c784"
                                     type="text"
                                     className="flex-1"
                                 />
@@ -70,7 +70,7 @@ const SettingsAppearance = () => {
                         />
                     </div>
                     <div className="flex items-center justify-between">
-                        <div>
+                        <div className='space-y-4'>
                             <Label htmlFor="white-label">
                                 White Label Mode
                             </Label>
