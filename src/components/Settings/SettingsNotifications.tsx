@@ -25,8 +25,6 @@ const SettingsNotifications = () => {
                     <CardTitle>Channel Configuration</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                    
-
                     <div className="flex items-center justify-between">
                         <div>
                             <Label htmlFor="desktop-notification">
