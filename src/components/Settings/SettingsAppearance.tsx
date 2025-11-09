@@ -70,7 +70,7 @@ const SettingsAppearance = () => {
                         />
                     </div>
                     <div className="flex items-center justify-between">
-                        <div className='space-y-4'>
+                        <div className="space-y-4">
                             <Label htmlFor="white-label">
                                 White Label Mode
                             </Label>
