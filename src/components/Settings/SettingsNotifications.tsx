@@ -1,4 +1,138 @@
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select';
 const SettingsNotifications = () => {
-    return <div>SettingsNotifications page</div>;
+    return (
+        <div className="space-y-6">
+            <div>
+                <h2 className="text-lg font-semibold mb-2">
+                    Notifications Settings
+                </h2>
+                <p className="text-muted-foreground">
+                    Configure notifications channels and templates.
+                </p>
+            </div>
+
+            <Card>
+                <CardHeader>
+                    <CardTitle>Channel Configuration</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                    
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="desktop-notification">
+                                Desktop Alerts
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Show system-level desktop popups
+                            </p>
+                        </div>
+                        <Switch id="desktop-notification" />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="slack-notification">
+                                Slack Messages
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Send notifications to your Slack workspace
+                            </p>
+                        </div>
+                        <Switch id="slack-notification" />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="discord-notification">
+                                Discord Alerts
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Receive notifications in Discord
+                            </p>
+                        </div>
+                        <Switch id="discord-notification" />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="sound-alert">Sound Alert</Label>
+                            <p className="text-sm text-muted-foreground">
+                                Play a sound when notifications arrive
+                            </p>
+                        </div>
+                        <Switch id="sound-alert" />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="do-not-disturb">
+                                Do Not Disturb
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Silence all notifications temporarily
+                            </p>
+                        </div>
+                        <Switch id="do-not-disturb" />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="digest-email">
+                                Daily Digest Email
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Receive a summary email once per day
+                            </p>
+                        </div>
+                        <Switch id="digest-email" />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Label htmlFor="critical-only">
+                                Critical Alerts Only
+                            </Label>
+                            <p className="text-sm text-muted-foreground">
+                                Only notify for high-priority events
+                            </p>
+                        </div>
+                        <Switch id="critical-only" />
+                    </div>
+                </CardContent>
+            </Card>
+
+            <Card>
+                <CardHeader>
+                    <CardTitle>Escalation Rules</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                    <div className="flex items-center justify-between">
+                        <Label htmlFor="escalation">Escalation Time</Label>
+                        <Select>
+                            <SelectTrigger>
+                                <SelectValue placeholder="Select escalation time" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="1hour">1 Hour</SelectItem>
+                                <SelectItem value="4hour">4 Hour</SelectItem>
+                                <SelectItem value="24hour">24 Hour</SelectItem>
+                                <SelectItem value="48hour">48 Hour</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+    );
 };
 export default SettingsNotifications;
