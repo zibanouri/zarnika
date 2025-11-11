@@ -4,7 +4,9 @@ import ChartWidget from '@/components/Dashboard/ChartWidget';
 import TableWidget from '@/components/Dashboard/TableWidget';
 import QuickActions from '@/components/Dashboard/QuickActions';
 import ActivityFeed from '@/components/Dashboard/ActivityFeed';
-import Settings from '@/components/Settings';
+import SettingsPage from '@/components/SettingsPage';
+import UsersPage from '@/components/UsersPage';
+// import { Users } from 'lucide-react';
 
 interface DashboardContentProps {
     currentPage: string;
@@ -14,9 +16,9 @@ const DashboardContent = ({ currentPage }: DashboardContentProps) => {
     const renderContent = () => {
         switch (currentPage) {
             case 'users':
-                return <div className="space-y-6">Users Page</div>;
+                return <UsersPage />;
             case 'settings':
-                return <Settings />;
+                return <SettingsPage />;
             case 'orders':
                 return <div className="space-y-6">Orders Page</div>;
             case 'payments':
