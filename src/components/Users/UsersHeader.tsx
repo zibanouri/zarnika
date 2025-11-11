@@ -24,7 +24,7 @@ const UsersHeader = () => {
                 </div>
                 <Button variant="outline" className="cursor-pointer">
                     <Plus className="h-4 w-4 mr-2" />
-                    Add New User
+                    Add new user
                 </Button>
             </div>
         </div>
