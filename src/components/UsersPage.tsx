@@ -2,16 +2,16 @@
 import UsersHeader from '@/components/Users/UsersHeader';
 
 export interface User {
-  id: string;
-  name: string;
-  email: string;
-  role: string;
-  status: 'Active' | 'Pending' | 'Inactive';
-  department: string;
-  lastLogin: string;
-  avatar?: string;
-  phone?: string;
-  employeeId?: string;
+    id: string;
+    name: string;
+    email: string;
+    role: string;
+    status: 'Active' | 'Pending' | 'Inactive';
+    department: string;
+    lastLogin: string;
+    avatar?: string;
+    phone?: string;
+    employeeId?: string;
 }
 
 const UsersPage = () => {
@@ -73,5 +73,4 @@ const UsersPage = () => {
     );
 };
 
-export default UsersPage; 
-    
+export default UsersPage;

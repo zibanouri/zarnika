@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 const SettingsPerformance = () => {
-        return (
+    return (
         <div className="space-y-6">
             <div>
                 <h2 className="text-lg font-semibold mb-2">

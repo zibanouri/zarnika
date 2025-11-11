@@ -7,7 +7,6 @@ import ActivityFeed from '@/components/Dashboard/ActivityFeed';
 import SettingsPage from '@/components/SettingsPage';
 import UsersPage from '@/components/UsersPage';
 
-
 interface DashboardContentProps {
     currentPage: string;
 }
