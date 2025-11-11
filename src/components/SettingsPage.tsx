@@ -11,7 +11,7 @@ import SettingsNotifications from '@/components/Settings/SettingsNotifications';
 import SettingsPerformance from '@/components/Settings/SettingsPerformance';
 import SettingsPermissions from '@/components/Settings/SettingsPermissions';
 import SettingsSecurity from '@/components/Settings/SettingsSecurity';
-const Settings = () => {
+const SettingsPage = () => {
     const [activeSection, setActiveSection] = useState<string>('general');
 
     const renderActiveSection = () => {
@@ -58,4 +58,4 @@ const Settings = () => {
         </div>
     );
 };
-export default Settings;
+export default SettingsPage;
