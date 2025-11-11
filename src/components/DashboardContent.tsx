@@ -5,8 +5,7 @@ import TableWidget from '@/components/Dashboard/TableWidget';
 import QuickActions from '@/components/Dashboard/QuickActions';
 import ActivityFeed from '@/components/Dashboard/ActivityFeed';
 import SettingsPage from '@/components/SettingsPage';
-import UsersPage from '@/components/UsersPage';
-// import { Users } from 'lucide-react';
+import UsersPage, { type User } from '@/components/UsersPage';
 
 interface DashboardContentProps {
     currentPage: string;
