@@ -119,7 +119,7 @@ const DashboardHeader = ({
                             className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center cursor-pointer"
                         >
                             <span className="text-primary-foreground font-bold text-md">
-                                C
+                                Z
                             </span>
                         </button>
                         <span className="font-bold text-lg hidden sm:block">
