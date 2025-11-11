@@ -1,5 +1,5 @@
-// import { Home, Plus } from 'lucide-react';
-// import { Button } from '../ui/button';
+import { Home, Plus } from 'lucide-react';
+import { Button } from '../ui/button';
 
 const UsersHeader = () => {
     return (
