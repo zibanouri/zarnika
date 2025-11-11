@@ -1,15 +1,21 @@
-import { useState } from "react";
-import  UsersHeader  from '@/components/Users/UsersHeader';
-
-
+// import { useState } from "react";
+import UsersHeader from '@/components/Users/UsersHeader';
 
 export interface User {
   id: string;
   name: string;
-  
+  email: string;
+  role: string;
+  status: 'Active' | 'Pending' | 'Inactive';
+  department: string;
+  lastLogin: string;
+  avatar?: string;
+  phone?: string;
+  employeeId?: string;
 }
+
 const UsersPage = () => {
-   // const [users, setUsers] = useState<User[]>([
+    // const [users, setUsers] = useState<User[]>([
     //     {
     //         id: "1",
     //         name: "John Doe",
@@ -60,13 +66,12 @@ const UsersPage = () => {
     //     },
     // ])
 
-
-  return (
+    return (
         <div className="space-y-6 p-6">
             <UsersHeader />
         </div>
     );
 };
 
-export default UsersPage;  
-export type { User };      
+export default UsersPage; 
+    
