@@ -1,5 +1,21 @@
-import { Home, Plus } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Download, Filter, FunnelX, Home, Plus, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select';
+import { Search, X, FileText, Sheet, FileSpreadsheet } from 'lucide-react';
 
 const UsersHeader = () => {
     return (
