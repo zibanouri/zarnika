@@ -31,7 +31,6 @@ import {
     PopoverTrigger,
 } from '@/components/ui/popover';
 
-
 const mockNotifications = [
     {
         id: 1,
