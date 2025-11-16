@@ -70,7 +70,9 @@ const UsersPage = () => {
     return (
         <div className="space-y-6 p-6">
             <UsersHeader />
-            <UsersTable />
+            <UsersTable 
+            users={users}
+            />
         </div>
     );
 };
