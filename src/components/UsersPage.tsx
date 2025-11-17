@@ -36,7 +36,7 @@ const UsersPage = () => {
             role: 'Editor',
             status: 'Active',
             department: 'Marketing',
-            lastLogin: "Never",
+            lastLogin: 'Never',
             avatar: '/zarnika/avatar/image2.webp',
             phone: '+1 (555) 234-5678',
             employeeId: 'CS002',
