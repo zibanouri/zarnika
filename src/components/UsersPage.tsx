@@ -37,7 +37,7 @@ const UsersPage = () => {
             status: 'Active',
             department: 'Marketing',
             lastLogin: '2025-10-12T16:35:51',
-            avatar: '/zarnika/avatar/image3.webp',
+            avatar: '/zarnika/avatar/image2.webp',
             phone: '+1 (555) 234-5678',
             employeeId: 'CS002',
         },
