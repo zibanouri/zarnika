@@ -23,6 +23,14 @@ interface UsersTableProps {
 }
 
 const UsersTable = ({ users }: UsersTableProps) => {
+    const getStatusColor = (status: string): string => {
+  switch (status) {
+    case "Active": return "bg-emerald-100 text-emerald-800";
+    case "Inactive": return "bg-slate-100 text-slate-800";
+    case "Pending": return "bg-yellow-100 text-yellow-800";
+    default: return "bg-gray-100 text-gray-800";
+  }
+};
   const formatDate = (dateString: string): string => {
     if (dateString === "Never") return "Never";
     return new Date(dateString).toLocaleDateString();
@@ -34,20 +42,23 @@ const UsersTable = ({ users }: UsersTableProps) => {
             <div className="border rounded-lg">
                 <div className="overflow-x-auto">
                     <Table>
-                        <TableHeader>
-                            <TableRow>
-                                <TableHead className="w-12">
-                                    <Checkbox className='mr-2' />
-                                    ID
-                                </TableHead>
-                                <TableHead className="w-32">User</TableHead>
-                                <TableHead>Role</TableHead>
-                                <TableHead>Department</TableHead>
-                                <TableHead>Status</TableHead>
-                                <TableHead>Last Login</TableHead>
-                                <TableHead>Actions</TableHead>
-                            </TableRow>
-                        </TableHeader>
+                       <TableHeader>
+  <TableRow>
+    <TableHead className="w-12">
+      <Checkbox className="mr-2" />
+      ID
+    </TableHead>
+    <TableHead className="w-32">User</TableHead>
+    <TableHead>Role</TableHead>
+    <TableHead>Department</TableHead>
+    <TableHead>Status</TableHead>
+    <TableHead>Last Login</TableHead>
+    <TableHead className="text-center">
+      Actions
+      <ChevronDown className="h-3 w-3 mx-auto mt-1 text-muted-foreground block" />
+    </TableHead>
+  </TableRow>
+</TableHeader>
                         <TableBody>
 {
     users.map((user) => (
@@ -77,7 +88,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
                                 </TableCell>
                                 <TableCell>IT</TableCell>
                                 <TableCell>
-                                    <Badge>{user.status}</Badge>
+                                    <Badge className={getStatusColor(user.status)}>{user.status}</Badge>
                                 </TableCell>
                                 <TableCell className='text-sm text-muted-foreground' >
                                 {formatDate(user.lastLogin)}
