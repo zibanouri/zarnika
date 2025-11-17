@@ -23,6 +23,12 @@ interface UsersTableProps {
 }
 
 const UsersTable = ({ users }: UsersTableProps) => {
+  const formatDate = (dateString: string): string => {
+    if (dateString === "Never") return "Never";
+    return new Date(dateString).toLocaleDateString();
+  };
+
+
     return (
         <div className="space-y-4 w-full">
             <div className="border rounded-lg">
@@ -43,36 +49,40 @@ const UsersTable = ({ users }: UsersTableProps) => {
                             </TableRow>
                         </TableHeader>
                         <TableBody>
+{
+    users.map((user) => (
                             <TableRow>
                                 <TableCell>
-                                    <Checkbox className='mr-2' />
+                                    <Checkbox className='mr-2' />  {user.id}
                                 </TableCell>
                                 <TableCell>
                                     <div className='flex items-center gap-2'>
                                         <Avatar className='h-8 w-8'>
-                                            <AvatarImage src='/zarnika/avatar/image2.webp' alt='Ar' />
-                                            <AvatarFallback>ID</AvatarFallback>
+                                            <AvatarImage src={user.avatar} alt={user.name} />
+                                            <AvatarFallback>{user.name
+                                            .split('')
+                                            .map((n)=> n[0])
+                                            .join('')}</AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <div className='font-medium truncate'>Arnika</div>
-                                            <div className='text-sm text-muted-foreground'>Arnika@company.com</div>
+                                            <div className='font-medium truncate'>{user.name}</div>
+                                            <div className='text-sm text-muted-foreground'>{user.email}</div>
                                         </div>
                                     </div>
                                 </TableCell>
                                 <TableCell>
                                     <Badge
                                         variant="outline"
-                                    >Admin</Badge>
+                                    >{user.role}</Badge>
                                 </TableCell>
                                 <TableCell>IT</TableCell>
                                 <TableCell>
-                                    <Badge>Active</Badge>
+                                    <Badge>{user.status}</Badge>
                                 </TableCell>
                                 <TableCell className='text-sm text-muted-foreground' >
-                                    '2025-10-12T16:35:24'
+                                {formatDate(user.lastLogin)}
                                 </TableCell>
                                 <TableCell className='text-sm text-muted-foreground' >
-                                    gyhfdghd
                                 </TableCell>
                                 <TableCell>
                                     <DropdownMenu>
@@ -102,6 +112,8 @@ const UsersTable = ({ users }: UsersTableProps) => {
                                     </DropdownMenu>
                                 </TableCell>
                             </TableRow>
+                             ))
+}
                         </TableBody>
                     </Table>
                 </div>
