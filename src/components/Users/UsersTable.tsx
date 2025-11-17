@@ -63,7 +63,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
     <TableHead>Status</TableHead>
     <TableHead>Last Login</TableHead>
     <TableHead className="text-center">
-      Actions
+      Action
     </TableHead>
   </TableRow>
 </TableHeader>
