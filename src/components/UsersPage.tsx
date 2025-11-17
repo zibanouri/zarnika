@@ -16,7 +16,7 @@ export interface User {
 }
 
 const UsersPage = () => {
-    const [users, setUsers] = useState<User[]>([
+    const [users] = useState<User[]>([
         {
             id: '1',
             name: 'Ziba',

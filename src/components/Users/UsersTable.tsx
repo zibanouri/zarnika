@@ -64,7 +64,6 @@ const UsersTable = ({ users }: UsersTableProps) => {
     <TableHead>Last Login</TableHead>
     <TableHead className="text-center">
       Actions
-      <ChevronDown className="h-3 w-3 mx-auto mt-1 text-muted-foreground block" />
     </TableHead>
   </TableRow>
 </TableHeader>
