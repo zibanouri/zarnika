@@ -1,7 +1,7 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import UsersHeader from '@/components/Users/UsersHeader';
 import UsersTable from '@/components/Users/UsersTable';
-
+import AddEditUserModal from "@/components/Users/AddEditUserModal";
 
 export interface User {
     id: string;
@@ -68,19 +68,21 @@ const UsersPage = () => {
         },
     ];
 
-    // const [isAddEditUserModal, setIsAddEditUserModal]=useState<boolean>(false);
-    // const handleAddUser = () ={
-    //     setIsAddEditUserModal(true)
-    // }
+ const [isAddEditUserModal, setIsAddEditUserModal]=useState<boolean>(false);
+ const handleAddUser = () =>{
+     setIsAddEditUserModal(true)
+ }
 
     return (
         <div className="space-y-6 p-6">
-            <UsersHeader />
+            <UsersHeader
+            addUserModal={handleAddUser}
+            />
             <UsersTable users={users} />
-            {/* <AddEditUserModal
+             <AddEditUserModal
             isOpen={isAddEditUserModal}
-            onClose={()=setIsAddEditUserModal(false)}
-            /> */}
+            onClose={()=>setIsAddEditUserModal(false)}
+            /> 
         </div>
     );
 };

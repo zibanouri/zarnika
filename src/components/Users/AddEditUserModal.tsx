@@ -1,11 +1,18 @@
-// interface AddEditUserModal {
-//     isOpen : boolean;
-//     onClose:() => void;
-// }
+import {Dialog,DialogContent,DialogHeader} from "@/components/ui/dialog";
+interface AddEditUserModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
 
-// const AddEditUserModal = (isOpen,onClose) => {
-//     return(
-//        <>abol</>
-//     )
-// }
-// export default AddEditUserModal;
+const AddEditUserModal = ({isOpen, onClose}:AddEditUserModalProps) => {
+    return (
+<Dialog open={isOpen} onOpenChange={onClose}>
+            <DialogContent className="max-w-md max-h-[90vh] overflow-y-hidden">
+                <DialogHeader>
+                    Header
+                </DialogHeader>
+            </DialogContent>
+        </Dialog>
+    )
+}
+export default AddEditUserModal;

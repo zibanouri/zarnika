@@ -16,7 +16,7 @@ import {
     TableCell,
 } from '@/components/ui/table';
 import { type User } from '@/components/UsersPage';
-import { Checkbox } from '../ui/checkbox';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -25,9 +25,9 @@ import {
     DropdownMenuItem,
     DropdownMenuContent,
 } from '@/components/ui/dropdown-menu';
-import { Button } from '../ui/button';
-import { ChevronDown, Trash2 } from 'lucide-react';
-import { Eye } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChevronDown, Trash2 ,Eye, Edit} from 'lucide-react';
+
 
 interface UsersTableProps {
     users: User[];
@@ -134,14 +134,13 @@ const UsersTable = ({ users }: UsersTableProps) => {
                                             <DropdownMenuContent align="end">
                                                 <DropdownMenuItem className="cursor-pointer">
                                                     <Eye className="mr-2 w-4 h-4" />
-                                                    view
+                                                    View
                                                 </DropdownMenuItem>
                                                 <DropdownMenuItem className="cursor-pointer">
-                                                    <Eye className="mr-2 w-4 h-4" />
+                                                    <Edit className="mr-2 w-4 h-4" />
                                                     Edit
                                                 </DropdownMenuItem>
                                                 <DropdownMenuItem className="cursor-pointer text-destructive">
-                                                    <Eye className="mr-2 w-4 h-4" />
                                                     <Trash2 className="mr-2 w-4 h-4" />
                                                     Delete
                                                 </DropdownMenuItem>
