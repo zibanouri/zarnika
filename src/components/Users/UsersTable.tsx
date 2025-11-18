@@ -26,8 +26,7 @@ import {
     DropdownMenuContent,
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, Trash2 ,Eye, Edit} from 'lucide-react';
-
+import { ChevronDown, Trash2, Eye, Edit } from 'lucide-react';
 
 interface UsersTableProps {
     users: User[];
