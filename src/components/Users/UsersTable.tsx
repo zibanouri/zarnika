@@ -107,7 +107,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
                                             {user.role}
                                         </Badge>
                                     </TableCell>
-                                    <TableCell>IT</TableCell>
+                                    <TableCell>{user.department}</TableCell>
                                     <TableCell>
                                         <Badge
                                             className={getStatusColor(
