@@ -19,14 +19,14 @@ const actions = [
 ];
 const QuickActions = () => {
     return (
-       <Card className="relative z-10 overflow-visible">
-            <CardHeader className="flex flex-col items-center ">
+    <Card>
+            <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                     <Milestone className="h-5 w-5" />
                     Quick Actions
                 </CardTitle>
             </CardHeader>
-           <CardContent className="overflow-visible">
+           <CardContent>
                 <div className="grid grid-cols-2 gap-3">
                     {actions.map((action, index) => {
                         const Icon = action.icon;
@@ -34,7 +34,7 @@ const QuickActions = () => {
                             <Button
                                 key={index}
                                 variant="outline"
-                                className="h-15 w-50 justify-start gap-2 hover:bg-accent cursor-pointer"
+                                className="h-15 justify-start gap-2 hover:bg-accent cursor-pointer"
                             >
                                 <div
                                     className={`p-2 rounded-lg text-white ${action.color}`}
