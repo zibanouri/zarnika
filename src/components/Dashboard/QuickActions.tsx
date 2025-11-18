@@ -26,7 +26,7 @@ const QuickActions = () => {
                     Quick Actions
                 </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className='overflow-visible'>
                 <div className="grid grid-cols-2 gap-3">
                     {actions.map((action, index) => {
                         const Icon = action.icon;
