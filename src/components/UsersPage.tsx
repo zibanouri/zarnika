@@ -15,7 +15,6 @@ export interface User {
 }
 
 const UsersPage = () => {
-
     const users: User[] = [
         {
             id: '1',
