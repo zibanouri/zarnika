@@ -19,14 +19,14 @@ const actions = [
 ];
 const QuickActions = () => {
     return (
-        <Card>
+       <Card className="relative z-10 overflow-visible">
             <CardHeader className="flex flex-col items-center ">
                 <CardTitle className="flex items-center gap-2">
                     <Milestone className="h-5 w-5" />
                     Quick Actions
                 </CardTitle>
             </CardHeader>
-            <CardContent className='overflow-visible'>
+           <CardContent className="overflow-visible">
                 <div className="grid grid-cols-2 gap-3">
                     {actions.map((action, index) => {
                         const Icon = action.icon;
