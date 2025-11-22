@@ -16,8 +16,8 @@ import {
     SelectContent,
     SelectItem,
 } from '@/components/ui/select';
-import { Eye,EyeClosed } from 'lucide-react';
-import { useState } from "react"; 
+import { Eye, EyeClosed } from 'lucide-react';
+import { useState } from "react";
 interface AddEditUserModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -139,21 +139,35 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                     <div className="space-y-2">
                         <Label htmlFor="password">Password *</Label>
                         <div className='relative'>
-                        <Input
-                            id="password"
-                            type={showPassword ? 'text':'password'}
-                            name="password"
-                            placeholder="Enter Password"
-                        />
-                        <Button
-                            type="button"
-                            variant="ghost"
-                            size="sm"
-                            className="absolute right-2 top-1/2 transform -translate-y-1/2 h-6 w-6 p-0"
-                             onClick={() => setShowPassword(!showPassword)} >
-                              {showPassword ? <EyeClosed className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                        </Button>
+                            <Input
+                                id="password"
+                                type={showPassword ? 'text' : 'password'}
+                                name="password"
+                                placeholder="Enter Password"
+                            />
+                            <Button
+                                type="button"
+                                variant="ghost"
+                                size="sm"
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-6 w-6 p-0"
+                                onClick={() => setShowPassword(!showPassword)} >
+                                {showPassword ? <EyeClosed className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                            </Button>
                         </div>
+                    </div>
+                    <div className='flex gap-2 pt-4'>
+                        <Button type='button'
+                            variant={'outline'}
+                            className='flex1'
+                        >
+                            cancel
+                        </Button>
+                        <Button type='submit'
+                            variant="default"
+                            className='flex-1 cursor-pointer'
+                        >
+                            create user
+                        </Button>
                     </div>
                 </form>
             </DialogContent>
