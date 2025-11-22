@@ -17,13 +17,14 @@ import {
     SelectItem,
 } from '@/components/ui/select';
 import { Eye,EyeClosed } from 'lucide-react';
-
+import { useState } from "react"; 
 interface AddEditUserModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
 const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
+    const [showPassword, setShowPassword] = useState<boolean>(false);
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
@@ -140,6 +141,7 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                         <div className='relative'>
                         <Input
                             id="password"
+                            type={showPassword ? 'text':'password'}
                             name="password"
                             placeholder="Enter Password"
                         />
@@ -148,8 +150,8 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                             variant="ghost"
                             size="sm"
                             className="absolute right-2 top-1/2 transform -translate-y-1/2 h-6 w-6 p-0"
-                        >
-                            <EyeClosed className='h-4 w-4 text-slate-800'></EyeClosed>
+                             onClick={() => setShowPassword(!showPassword)} >
+                              {showPassword ? <EyeClosed className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                         </Button>
                         </div>
                     </div>
