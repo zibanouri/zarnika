@@ -160,7 +160,7 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                             </Button>
                         </div>
                     </div>
-                    <div className="flex gap-2 pt-4">
+                    <div className="flex-1 gap-2 pt-4">
                         <Button
                             type="button"
                             variant={'outline'}
