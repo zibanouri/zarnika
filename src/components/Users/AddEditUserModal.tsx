@@ -16,6 +16,7 @@ import {
     SelectContent,
     SelectItem,
 } from '@/components/ui/select';
+import { Eye,EyeClosed } from 'lucide-react';
 
 interface AddEditUserModalProps {
     isOpen: boolean;
@@ -58,7 +59,7 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                             name="name"
                             placeholder="Enter full name" required
                         />
-                       
+
                     </div>
                     <div className="space-y-2">
                         <Label htmlFor="email">Email *</Label>
@@ -66,9 +67,9 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                             id="email"
                             type='email'
                             name="email"
-                            placeholder="Enter email address"required
+                            placeholder="Enter email address" required
                         />
-                        
+
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
@@ -134,14 +135,23 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                             placeholder="Enter Employee ID"
                         />
                     </div>
-                     <div className="space-y-2">
+                    <div className="space-y-2">
                         <Label htmlFor="password">Password *</Label>
+                        <div className='relative'>
                         <Input
                             id="password"
                             name="password"
                             placeholder="Enter Password"
                         />
-                        <Button type='button'></Button>
+                        <Button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            className="absolute right-2 top-1/2 transform -translate-y-1/2 h-6 w-6 p-0"
+                        >
+                            <EyeClosed className='h-4 w-4 text-slate-800'></EyeClosed>
+                        </Button>
+                        </div>
                     </div>
                 </form>
             </DialogContent>
