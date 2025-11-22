@@ -56,24 +56,24 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                         <Input
                             id="name"
                             name="name"
-                            placeholder="Enter full name"
+                            placeholder="Enter full name" required
                         />
-                        required
+                       
                     </div>
                     <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
+                        <Label htmlFor="email">Email *</Label>
                         <Input
                             id="email"
+                            type='email'
                             name="email"
-                            placeholder="Enter email address"
+                            placeholder="Enter email address"required
                         />
+                        
                     </div>
-
-                    {/* Role & Status (2 columns) */}
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <Label htmlFor="role">Role</Label>
-                            <Select>
+                            <Label htmlFor="role">Role *</Label>
+                            <Select required>
                                 <SelectTrigger id="role" className="w-full">
                                     <SelectValue placeholder="Select role" />
                                 </SelectTrigger>
@@ -90,7 +90,7 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="status">Status</Label>
+                            <Label htmlFor="status">Status *</Label>
                             <Select>
                                 <SelectTrigger id="status" className="w-full">
                                     <SelectValue placeholder="Select status" />
@@ -111,7 +111,7 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                     </div>
 
                     <div className="space-y-2">
-                        <Label htmlFor="department">Department</Label>
+                        <Label htmlFor="department">Department *</Label>
                         <Input
                             id="department"
                             name="department"
@@ -133,6 +133,15 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                             name="employee"
                             placeholder="Enter Employee ID"
                         />
+                    </div>
+                     <div className="space-y-2">
+                        <Label htmlFor="password">Password *</Label>
+                        <Input
+                            id="password"
+                            name="password"
+                            placeholder="Enter Password"
+                        />
+                        <Button type='button'></Button>
                     </div>
                 </form>
             </DialogContent>
