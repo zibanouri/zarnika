@@ -163,11 +163,11 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                     <div className="flex-1 gap-2 pt-4">
                         <Button
                             type="button"
-                            variant={'outline'}
+                            variant="outline"
                             className="flex-1 text-slate-800 hover:text-red-700"
                             onClick={onClose}
                         >
-                            cancel
+                            Cancel
                         </Button>
                         <Button
                             type="submit"
