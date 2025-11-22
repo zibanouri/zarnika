@@ -164,7 +164,7 @@ const AddEditUserModal = ({ isOpen, onClose }: AddEditUserModalProps) => {
                         <Button
                             type="button"
                             variant={'outline'}
-                            className="flex1"
+                            className="flex-1 text-slate-800 hover:text-red-700"
                             onClick={onClose}
                         >
                             cancel
