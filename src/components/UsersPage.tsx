@@ -86,10 +86,7 @@ const UsersPage = () => {
         <div className="space-y-6 p-6">
             <UsersHeader onAddUser={handleAddUser} />
 
-            <UsersTable 
-                users={users}
-                onViewUser={handleViewUser} 
-            />
+            <UsersTable users={users} onViewUser={handleViewUser} />
 
             <AddEditUserModal
                 isOpen={isAddEditModalOpen}
@@ -99,7 +96,7 @@ const UsersPage = () => {
             <UserDetailsModal
                 isOpen={isDetailsModalOpen}
                 onClose={() => setDetailsModalOpen(false)}
-                user={selectedUser} 
+                user={selectedUser}
             />
         </div>
     );

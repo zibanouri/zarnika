@@ -19,9 +19,7 @@ import { Search, X, FileText, Sheet, FileSpreadsheet } from 'lucide-react';
 interface UsersHeaderProps {
     onAddUser: () => void;
 }
- const UsersHeader = ({ onAddUser }: UsersHeaderProps) => {
-
-    
+const UsersHeader = ({ onAddUser }: UsersHeaderProps) => {
     return (
         <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -45,7 +43,7 @@ interface UsersHeaderProps {
                 <Button
                     variant="outline"
                     className="cursor-pointer"
-                      onClick={onAddUser}
+                    onClick={onAddUser}
                 >
                     <Plus className="h-4 w-4 mr-2" />
                     Add New User

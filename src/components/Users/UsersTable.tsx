@@ -114,7 +114,11 @@ const UsersTable = ({ users, onViewUser }: UsersTableProps) => {
                                     <TableCell>{user.department}</TableCell>
 
                                     <TableCell>
-                                        <Badge className={getStatusColor(user.status)}>
+                                        <Badge
+                                            className={getStatusColor(
+                                                user.status
+                                            )}
+                                        >
                                             {user.status}
                                         </Badge>
                                     </TableCell>
@@ -126,7 +130,10 @@ const UsersTable = ({ users, onViewUser }: UsersTableProps) => {
                                     <TableCell className="text-right">
                                         <DropdownMenu>
                                             <DropdownMenuTrigger asChild>
-                                                <Button variant="ghost" size="sm">
+                                                <Button
+                                                    variant="ghost"
+                                                    size="sm"
+                                                >
                                                     <ChevronDown className="h-4 w-4" />
                                                 </Button>
                                             </DropdownMenuTrigger>
@@ -134,7 +141,9 @@ const UsersTable = ({ users, onViewUser }: UsersTableProps) => {
                                             <DropdownMenuContent align="end">
                                                 <DropdownMenuItem
                                                     className="cursor-pointer"
-                                                    onClick={() => onViewUser(user)}
+                                                    onClick={() =>
+                                                        onViewUser(user)
+                                                    }
                                                 >
                                                     <Eye className="mr-2 w-4 h-4" />
                                                     View
