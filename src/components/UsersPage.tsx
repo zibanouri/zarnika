@@ -69,16 +69,16 @@ const UsersPage = () => {
         },
     ];
 
-    const [isAddEditUserModal, setIsAddEditUserModal] = useState(false);
+    const [isAddEditModalOpen, setAddEditModalOpen] = useState(false);
     const [isDetailsModalOpen, setDetailsModalOpen] = useState(false);
-    const [viewingUser, setViewingUser] = useState<User | null>(null);
+    const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
     const handleAddUser = () => {
-        setIsAddEditUserModal(true);
+        setAddEditModalOpen(true);
     };
 
     const handleViewUser = (user: User) => {
-        setViewingUser(user);
+        setSelectedUser(user);
         setDetailsModalOpen(true);
     };
 
@@ -87,19 +87,19 @@ const UsersPage = () => {
             <UsersHeader onAddUser={handleAddUser} />
 
             <UsersTable 
-                users={users} 
-                onViewUser={handleViewUser}
+                users={users}
+                onViewUser={handleViewUser} 
             />
 
             <AddEditUserModal
-                isOpen={isAddEditUserModal}
-                onClose={() => setIsAddEditUserModal(false)}
+                isOpen={isAddEditModalOpen}
+                onClose={() => setAddEditModalOpen(false)}
             />
 
             <UserDetailsModal
                 isOpen={isDetailsModalOpen}
                 onClose={() => setDetailsModalOpen(false)}
-                user={viewingUser}
+                user={selectedUser} 
             />
         </div>
     );
