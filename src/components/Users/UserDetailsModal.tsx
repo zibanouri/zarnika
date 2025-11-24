@@ -81,7 +81,7 @@ const UserDetailsModal = ({ isOpen, onClose, user, onEdit }: Props) => {
                                 Phone
                             </p>
                             <p className="text-sm font-medium">
-                                {user.phone ?? '—'}
+                                {user.phone}
                             </p>
                         </div>
                     </div>
@@ -101,13 +101,6 @@ const UserDetailsModal = ({ isOpen, onClose, user, onEdit }: Props) => {
                         <div>
                             <p className="text-xs text-muted-foreground">
                                 Last Login
-                            </p>
-                            <p className="text-sm font-medium">
-                                {user.lastLogin === 'Never'
-                                    ? 'Never'
-                                    : new Date(
-                                          user.lastLogin
-                                      ).toLocaleDateString()}
                             </p>
                         </div>
                     </div>
