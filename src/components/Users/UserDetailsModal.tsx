@@ -80,9 +80,7 @@ const UserDetailsModal = ({ isOpen, onClose, user, onEdit }: Props) => {
                             <p className="text-xs text-muted-foreground">
                                 Phone
                             </p>
-                            <p className="text-sm font-medium">
-                                {user.phone}
-                            </p>
+                            <p className="text-sm font-medium">{user.phone}</p>
                         </div>
                     </div>
                     <div className="rounded-lg border p-3 flex items-start gap-3">
