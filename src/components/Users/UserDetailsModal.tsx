@@ -102,6 +102,7 @@ const UserDetailsModal = ({ isOpen, onClose, user, onEdit }: Props) => {
                             <p className="text-xs text-muted-foreground">
                                 Last Login
                             </p>
+                            <p className="text-sm">{user.lastLogin}</p>
                         </div>
                     </div>
                 </div>
