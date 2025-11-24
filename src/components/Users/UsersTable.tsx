@@ -30,9 +30,10 @@ import { ChevronDown, Trash2, Eye, Edit } from 'lucide-react';
 
 interface UsersTableProps {
     users: User[];
+    onViewUser: (user: User) => void;
 }
 
-const UsersTable = ({ users }: UsersTableProps) => {
+const UsersTable = ({ users, onViewUser }: UsersTableProps) => {
     const getStatusColor = (status: string): string => {
         switch (status) {
             case 'Active':
@@ -45,6 +46,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
                 return 'bg-gray-100 text-gray-800';
         }
     };
+
     const formatDate = (dateString: string): string => {
         if (dateString === 'Never') return 'Never';
         return new Date(dateString).toLocaleDateString();
@@ -58,8 +60,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
                         <TableHeader>
                             <TableRow>
                                 <TableHead className="w-12">
-                                    <Checkbox className="mr-2" />
-                                    ID
+                                    <Checkbox className="mr-2" /> ID
                                 </TableHead>
                                 <TableHead className="w-32">User</TableHead>
                                 <TableHead>Role</TableHead>
@@ -71,12 +72,14 @@ const UsersTable = ({ users }: UsersTableProps) => {
                                 </TableHead>
                             </TableRow>
                         </TableHeader>
+
                         <TableBody>
                             {users.map((user) => (
-                                <TableRow>
+                                <TableRow key={user.id}>
                                     <TableCell>
                                         <Checkbox className="mr-2" /> {user.id}
                                     </TableCell>
+
                                     <TableCell>
                                         <div className="flex items-center gap-2">
                                             <Avatar className="h-8 w-8">
@@ -86,7 +89,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
                                                 />
                                                 <AvatarFallback>
                                                     {user.name
-                                                        .split('')
+                                                        .split(' ')
                                                         .map((n) => n[0])
                                                         .join('')}
                                                 </AvatarFallback>
@@ -101,44 +104,47 @@ const UsersTable = ({ users }: UsersTableProps) => {
                                             </div>
                                         </div>
                                     </TableCell>
+
                                     <TableCell>
                                         <Badge variant="outline">
                                             {user.role}
                                         </Badge>
                                     </TableCell>
+
                                     <TableCell>{user.department}</TableCell>
+
                                     <TableCell>
-                                        <Badge
-                                            className={getStatusColor(
-                                                user.status
-                                            )}
-                                        >
+                                        <Badge className={getStatusColor(user.status)}>
                                             {user.status}
                                         </Badge>
                                     </TableCell>
+
                                     <TableCell className="text-sm text-muted-foreground">
                                         {formatDate(user.lastLogin)}
                                     </TableCell>
-                                    <TableCell className="text-sm text-muted-foreground"></TableCell>
-                                    <TableCell>
+
+                                    <TableCell className="text-right">
                                         <DropdownMenu>
                                             <DropdownMenuTrigger asChild>
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                >
+                                                <Button variant="ghost" size="sm">
                                                     <ChevronDown className="h-4 w-4" />
                                                 </Button>
                                             </DropdownMenuTrigger>
+
                                             <DropdownMenuContent align="end">
-                                                <DropdownMenuItem className="cursor-pointer">
+                                                <DropdownMenuItem
+                                                    className="cursor-pointer"
+                                                    onClick={() => onViewUser(user)}
+                                                >
                                                     <Eye className="mr-2 w-4 h-4" />
                                                     View
                                                 </DropdownMenuItem>
+
                                                 <DropdownMenuItem className="cursor-pointer">
                                                     <Edit className="mr-2 w-4 h-4" />
                                                     Edit
                                                 </DropdownMenuItem>
+
                                                 <DropdownMenuItem className="cursor-pointer text-destructive">
                                                     <Trash2 className="mr-2 w-4 h-4" />
                                                     Delete
@@ -152,6 +158,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
                     </Table>
                 </div>
             </div>
+
             <Pagination>
                 <PaginationContent>
                     <PaginationItem>

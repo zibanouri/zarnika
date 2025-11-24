@@ -2,8 +2,9 @@ import { useState } from 'react';
 import UsersHeader from '@/components/Users/UsersHeader';
 import UsersTable from '@/components/Users/UsersTable';
 import AddEditUserModal from '@/components/Users/AddEditUserModal';
+import UserDetailsModal from '@/components/Users/UserDetailsModal';
 
-export interface User {
+export type User = {
     id: string;
     name: string;
     email: string;
@@ -14,7 +15,7 @@ export interface User {
     avatar?: string;
     phone?: string;
     employeeId?: string;
-}
+};
 
 const UsersPage = () => {
     const users: User[] = [
@@ -68,30 +69,38 @@ const UsersPage = () => {
         },
     ];
 
-    const [isAddEditUserModal, setIsAddEditUserModal] =
-        useState<boolean>(false);
+    const [isAddEditUserModal, setIsAddEditUserModal] = useState(false);
+    const [isDetailsModalOpen, setDetailsModalOpen] = useState(false);
+    const [viewingUser, setViewingUser] = useState<User | null>(null);
 
-        const [isAddIsDetailsModal,setAddIsDetailsModal]= useState<boolean>(false)
-        const [viewingUser.setviewingUser] = useState<User | null>
     const handleAddUser = () => {
         setIsAddEditUserModal(true);
     };
-    const handlViewUser= () => {
-        setAddIsDetailsModal(true);
-    }
+
+    const handleViewUser = (user: User) => {
+        setViewingUser(user);
+        setDetailsModalOpen(true);
+    };
 
     return (
         <div className="space-y-6 p-6">
             <UsersHeader onAddUser={handleAddUser} />
-            <UsersTable users={users} />
+
+            <UsersTable 
+                users={users} 
+                onViewUser={handleViewUser}
+            />
+
             <AddEditUserModal
                 isOpen={isAddEditUserModal}
                 onClose={() => setIsAddEditUserModal(false)}
             />
+
             <UserDetailsModal
-            isOpen={isDetailsModal}
-            onClose{() => setIsAddEditUserModal(false)}
-            user={viewingUser}
+                isOpen={isDetailsModalOpen}
+                onClose={() => setDetailsModalOpen(false)}
+                user={viewingUser}
+            />
         </div>
     );
 };
