@@ -70,18 +70,28 @@ const UsersPage = () => {
 
     const [isAddEditUserModal, setIsAddEditUserModal] =
         useState<boolean>(false);
+
+        const [isAddIsDetailsModal,setAddIsDetailsModal]= useState<boolean>(false)
+        const [viewingUser.setviewingUser] = useState<User | null>
     const handleAddUser = () => {
         setIsAddEditUserModal(true);
     };
+    const handlViewUser= () => {
+        setAddIsDetailsModal(true);
+    }
 
     return (
         <div className="space-y-6 p-6">
-            <UsersHeader addUserModal={handleAddUser} />
+            <UsersHeader onAddUser={handleAddUser} />
             <UsersTable users={users} />
             <AddEditUserModal
                 isOpen={isAddEditUserModal}
                 onClose={() => setIsAddEditUserModal(false)}
             />
+            <UserDetailsModal
+            isOpen={isDetailsModal}
+            onClose{() => setIsAddEditUserModal(false)}
+            user={viewingUser}
         </div>
     );
 };
